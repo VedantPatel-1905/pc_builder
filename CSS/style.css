@@ -538,7 +538,7 @@ section.prebuilt > div.productScroll >div
     flex-direction: row;
     display: flex;
     flex-direction: column;
-    margin: 0 3em;
+    margin: 1em 3em;
     
 }
 section.prebuilt > div.productScroll >div >div:first-child
@@ -618,23 +618,59 @@ section.customizeIntro
 {
     display: flex;
     flex-direction: column;
+    
 }
 section.customizeIntro > div:first-child > h2
 {
     font-size: 2.4em;
+    background-color: #46227b;
+    color: #f2f2f2;
+    width: 15em;
+    margin-bottom: 0px;
+    padding: .8em ;
 }
 div.customizeIntro
+{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    
+}
+
+div.customizeIntro > div
+{
+    margin: 2em 0 0 0;
+}
+div.customizeIntro > div > span
 {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    margin: auto;
+    transform: rotate(45deg);
+    border: 2px solid #6535ad ;
+    height: 100px;
+    width: 100px;
 }
-
+div.customizeIntro > div > span > img
+{
+    transform: rotate(-45deg);
+    width: 50px;
+    height: auto;
+}
+div.customizeIntro > div > p
+{
+    font-size: 1em;
+    padding: 10px 0 0 0;
+}
 /* css for pc pre built models */
 section.productPromo
 {
     width: 100%;
+    
 }
 
 section.productPromo > h2
