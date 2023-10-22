@@ -1,0 +1,837 @@
+/* ------- Global styling ------- */
+body
+{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* ------- set the text properties------- */
+h1
+{
+    font-family: 'Agdasima', sans-serif;
+}
+h2,h3,h4,h5,h6
+{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+p,a,li,span
+{
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+/* ------- css for header------- */
+header.indexHeader
+{
+    z-index: 999;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background-color: #101010;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* ------- css for website logo------- */
+header.indexHeader > div
+{
+    height: 100px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+header.indexHeader > div:first-child,
+header.indexHeader > div:last-child
+{
+    margin: 0 0 0 10px;
+}
+header.indexHeader > div:first-child > button,
+header.indexHeader > div:last-child > button
+{
+    /* height: 80px; */
+    width: auto;
+    border: none;
+    background: none;
+}
+header.indexHeader > div:first-child > button >img,
+header.indexHeader > div:last-child > button >img
+{
+    height: 40px;
+    width: auto;
+}
+
+header.indexHeader > div:nth-child(2) >a 
+{
+    font-family: 'Rubik Mono One', monospace;
+    font-size: 2.2em;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 1px 1px 1px #f8f8f8;
+}
+header.indexHeader > div:nth-child(2) >a::before
+{
+    content: 'nzxt';
+    position: absolute;
+    
+}
+header.indexHeader > div:nth-child(2) >a::after
+{
+    position: absolute;
+    content: 'nzxt';
+}
+
+  
+/* ------- css for navigation bar and links ------- */
+div.subHeader > nav
+{
+    position: relative;
+    top: 91px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.subHeader > nav > menu
+{
+    list-style: none;
+    display: flex; 
+    text-transform: uppercase;
+    margin: 0px;
+    padding: 0px;
+}
+div.subHeader > nav > menu > li
+{
+    padding: 0 15px;  
+}
+div.subHeader > nav > menu > li > a
+{
+    color: #0b8baf;
+    font-size: 1em;
+    transition: border .5 ease-in;
+}
+div.subHeader > nav > menu > li > a:nth-child(1):hover,
+div.subHeader > nav > menu > li > a:nth-child(2):hover,
+div.subHeader > nav > menu > li > a:nth-child(3):hover,
+div.subHeader > nav > menu > li > a:nth-child(4):hover
+{
+    padding: 10px 0 0 0;
+    border-top: 3px solid #e3e4e4;
+}
+header.active1 > nav > menu > li > a#activeLink1,
+header.active2 > nav > menu > li > a#activeLink2,
+header.active3 > nav > menu > li > a#activeLink3,
+header.active4 > nav > menu > li > a#activeLink4
+{
+    border-bottom: 3px solid #0D4354;
+}
+/* css for hidden menu of website */
+.backgroundBlur 
+{
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,#000000,#101010,#1f1f1f);
+    z-index: 100;
+    display: none;
+    top: 0;
+}
+
+.menuContainer 
+{
+    position: fixed;
+    margin: 100px 0;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 101;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.menuContainer > div
+{
+    width: 50%;
+    color: #141414;
+}
+.menuContainer > div > nav > menu
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    display: flex; 
+    margin: 3em 0 0 0;
+    padding: 0px;
+}
+.menuContainer > div > nav > menu > li > a
+{
+    color: #f8f8f8;
+    padding: 0 0 0 1em;
+    transition: all .4s ease-in-out;
+    overflow: hidden;
+}
+.menuContainer > div > nav > menu > li.boldMenu > a
+{
+    font-size: 2.4em;
+    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.5em;
+    letter-spacing: 0px;
+}
+.menuContainer > div > nav > menu > li > a:hover
+{
+    color: #ecb40b;
+}
+.menuContainer > div > nav > menu > li.boldMenu > a:hover
+{
+    letter-spacing: 2px;
+}
+.menuContainer > div > nav > menu > li.boldMenu > a::before
+{
+    content: ' ';
+    font-weight: 300;
+    transition: all .1s ease-out; 
+}
+.menuContainer > div > nav > menu > li.boldMenu > a:hover::before
+{
+    content: "\\ ";
+    color: #ecb40b;
+    word-spacing: 10px;
+}
+.showMenu
+{
+    display: flex;
+}
+
+
+/* Css for main section of the body */
+main
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+}
+
+/* css for carosel */
+section.productIntro
+{
+    margin: 55px 0 0 0 ;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+section.productIntro > div.slider
+{
+    position: relative;
+    /* overflow: hidden; */
+    scroll-snap-align: start;
+}
+section.productIntro > div >div
+{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: all .3 linear;
+
+}
+section.productIntro > div >div>div
+{
+    text-align: center;
+    width: 50%;
+    height: auto;
+}
+section.productIntro > div >div  >div> img
+{
+    margin: 45px 0 0 0;
+    width: 32em;
+    height: auto;
+}
+
+/* css for carosel masthead1 */
+div.slider > div#masthead1
+{
+    width: 100%;
+    height: 34em;
+    background-image: url('../img/masthead4.jpg');
+    background-size: 100% 34em;
+    background-repeat: no-repeat;
+}
+div.slider > div#masthead1 > div:nth-child(1), 
+div.slider > div#masthead3 > div:nth-child(1), 
+div.slider > div#masthead4 > div:nth-child(1) 
+{
+    text-align: left;
+    padding: 72px 0 0 6rem;
+}
+div.slider > div#masthead1 > div > span
+{
+    background-color: #1f1f1f;
+    color: #f8f8f8;
+    font-family: 'Rubik', sans-serif;
+    padding: 5px 2rem;
+}
+div.slider > div#masthead1 > div > h1
+{
+    font-size: 3em;
+}
+div.slider > div#masthead1 > div > p:nth-child(3)
+{
+    font-size: 1.3em;
+}
+div.slider > div#masthead1 > div > p:nth-child(4)
+{
+    font-size: 1em;
+    font-style: italic;
+}
+div.slider > div#masthead1 > div > a> span
+{
+    background-color: #6b2ec6;
+    color: #f8f8f8;
+    margin: 2rem 0 0 0;
+    padding: 10px 2.5rem;
+    border-radius: 5px;
+    box-shadow: 1px 2px 6px #422a54;
+    font-size: 1.3rem;
+    line-height: 6rem;
+    transition: all .3s ease-in-out;
+}
+div.slider > div#masthead1 > div > a> span:hover
+{
+    background-color: #5828a2;
+    padding: 11px 2.6rem;
+}
+/* css for carosel masthead2 */
+div#masthead2
+{
+    background-color: #30135B;
+    color: #f8f8f8;
+}
+div.slider > div#masthead2 > div 
+{
+    text-align: left;
+    padding: 72px 0 0 50px;
+}
+div.slider > div#masthead2 > div > span,
+div.slider > div#masthead3 > div > span
+{
+    background: linear-gradient(40deg,#ac64eb,#6c87f1,#adabab,#7946f1);
+    font-family: 'Rubik', sans-serif;
+    padding: 5px 2rem;
+    color: #381255;
+    font-weight: 500;
+}
+div.slider > div#masthead2 > div > h1
+{
+    font-size: 2.7em;
+    display: flex;
+    flex-direction: column;
+}
+div.slider > div#masthead2 > div > p:nth-child(3)
+{
+    font-size: 1.3em;
+}
+div.slider > div#masthead2 > div > p:nth-child(4)
+{
+    font-size: 1em;
+    font-style: italic;
+}
+div.slider > div#masthead2 > div > a> span
+{
+    color: #f8f8f8;
+    border: 1px solid #f8f8f8;
+    margin: 2rem 0 0 0;
+    padding: 10px 2.5rem;
+    border-radius: 5px;
+    box-shadow: 1px 2px 6px #422a54;
+    font-size: 1.3rem;
+    line-height: 6rem;
+    transition: all .3s ease-in-out;
+}
+div.slider > div#masthead2 > div > a> span:hover
+{
+    padding: 11px 2.6rem;
+}
+
+
+/* css for carosel masthead3 */
+div.slider > div#masthead3
+{
+    width: 100%;
+    height: 34em;
+    background-image: url('../img/masthead5.jpg');
+    background-size: 100% 34em;
+    color: #f8f8f8;
+    background-repeat: no-repeat;
+}
+div.slider > div#masthead3 > div > h1
+{
+    font-size: 2.7em;
+    display: flex;
+    flex-direction: column;
+}
+div.slider > div#masthead3 > div > p:nth-child(3)
+{
+    font-size: 1.3em;
+}
+div.slider > div#masthead3 > div > p:nth-child(4)
+{
+    font-size: 1em;
+    font-style: italic;
+}
+div.slider > div#masthead3 > div > a> span
+{
+    color: #f8f8f8;
+    border: 1px solid #f8f8f8;
+    margin: 2rem 0 0 0;
+    padding: 10px 2.5rem;
+    border-radius: 5px;
+    box-shadow: 1px 2px 6px #422a54;
+    font-size: 1.3rem;
+    line-height: 6rem;
+    transition: all .3s ease-in-out;
+}
+div.slider > div#masthead3 > div > a> span:hover
+{
+    padding: 11px 2.6rem;
+}
+
+div.slider > div#masthead2 > div:nth-child(1),
+div.slider > div#masthead4 > div:nth-child(2)
+{
+    text-align: center;
+}
+/* css for carosel masthead4 */
+div#masthead4
+{
+    background-color: #6b2ec6;
+    color: #f8f8f8;
+}
+div.slider > div#masthead4 > div > h1
+{
+    font-size: 2.7em;
+    display: flex;
+    flex-direction: column;
+}
+div.slider > div#masthead4 > div > p:nth-child(3)
+{
+    font-size: 1.3em;
+}
+div.slider > div#masthead4 > div > a> span
+{
+    border: 1px solid #f8f8f8;
+    color: #f8f8f8;
+    margin: 2rem 0 0 0;
+    padding: 10px 2.5rem;
+    border-radius: 5px;
+    box-shadow: 1px 2px 6px #422a54;
+    font-size: 1.3rem;
+    line-height: 6rem;
+    transition: all .3s ease-in-out;
+}
+div.slider > div#masthead4 > div > a> span:hover
+{
+    padding: 11px 2.6rem;
+}
+div.carouselBtn
+{
+    position: absolute;
+    z-index: 2;
+    background: none;
+    cursor: pointer;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.485);
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+div.carouselBtn:focus,
+div.carouselBtn:hover
+{
+    color: #f8f8f8;
+}
+div.carouselBtn:focus
+{
+    outline: 1px solid black;
+}
+
+div.carouselBtn#prev
+{
+    left: .3rem;
+}
+div.carouselBtn#next
+{
+    right: .3rem;
+}
+
+/* css for home page pre built pc */
+section.prebuilt
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+section.prebuilt > div:first-child
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section.prebuilt > div:first-child >h2
+{
+    font-size: 2.3em;
+    font-weight: 700;
+    margin: 0px;
+    padding: 1em 0 0 0;
+    color: #10091d;
+}
+section.prebuilt > div:first-child >p
+{
+    text-align: center;
+    max-width: 50%;
+}
+
+section.prebuilt > div.productScroll
+{
+    display: flex;
+
+}
+/* scrolling section of the product  */
+
+section.prebuilt > div.productScroll
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-snap-align: start;
+    background-color: #ffffff;
+}
+section.prebuilt > div.productScroll::-webkit-scrollbar
+{
+    /* this is to hide scrollbar  */
+    display: none;
+}
+section.prebuilt > div.productScroll >div p
+{
+    padding: 3px 0;
+}
+section.prebuilt > div.productScroll >div
+{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    flex-direction: column;
+    margin: 0 3em;
+    
+}
+section.prebuilt > div.productScroll >div >div:first-child
+{
+    display: flex;
+    border-radius: 3px;
+    width: 300px;
+    height: 250px;
+    justify-content: center;  
+    align-content: center;
+}
+section.prebuilt > div.productScroll >div >div:first-child:hover >img
+{
+    max-width: 270px;
+    max-height: 275px;
+    
+}
+section.prebuilt > div.productScroll >div >div:first-child >img
+{
+    transition: all .3s ease-in-out;
+    margin: auto;
+    max-width: 250px;
+}
+section.prebuilt > div.productScroll >div >div:nth-child(2),
+section.prebuilt > div.productScroll >div >div:nth-child(3)
+{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    border-bottom: 1px solid #b3b1b1 ;
+}
+section.prebuilt > div.productScroll >div >div:nth-child(2) > p
+{
+    font-size: .9em;
+    color: #6f6f6f;
+    margin: 0px;
+}
+section.prebuilt > div.productScroll >div >div:nth-child(3) > p:first-child
+{
+    font-size: 1em;
+    font-weight: 500;
+    margin: 0px;
+}
+section.prebuilt > div.productScroll >div >div:nth-child(3) > p.productScroll
+{
+    font-size: .9em;
+    color: #6f6f6f;
+    margin: 0px;
+}
+section.prebuilt > div.productScroll >div >div:nth-child(4) 
+{
+    text-align: center;
+    font-size: 1.2em;
+    padding: 10px 0;
+}
+section.prebuilt > div.productScroll >div >div:nth-child(5)
+{
+    text-align: center;
+}
+section.prebuilt > div.productScroll >div >div:nth-child(5) >a
+{
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #5828a2;
+    transition: all .2s ease-in-out;
+    color: #f2f2f2;
+}
+section.prebuilt > div.productScroll >div >div:nth-child(5) >a:hover
+{
+    background-color: #46227b;
+    transform: scale(1.1);
+}
+/* css for customize your pc intro */
+section.customizeIntro
+{
+    display: flex;
+    flex-direction: column;
+}
+section.customizeIntro > div:first-child > h2
+{
+    font-size: 2.4em;
+}
+div.customizeIntro
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* css for pc pre built models */
+section.productPromo
+{
+    width: 100%;
+}
+
+section.productPromo > h2
+{
+    text-align: center;
+    font-size: 2em;
+    color: #efefef;
+    background-color: #6b2ec6;
+    height: 3em;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.productPromo > div
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+div.productPromo
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 3em 1.2em;
+    max-width: 30%;    
+    border-radius: 5px;
+}
+div.productPromo:hover
+{
+    background-color: #ffffff;
+
+}
+div.productPromo > div
+{
+    box-sizing: border-box;
+    width: 100%;
+}
+div.productPromo > div:first-child 
+{
+    text-align: center;
+}
+div.productPromo > div > img
+{
+    width: 80%;
+    height: auto;
+}
+
+div.productPromo div.matchColor
+{
+    background-color: #353436;
+    
+}
+div.productPromo > div:first-child  div.matchColor:hover
+{
+    background-color: #a195b3;
+
+}
+div.productPromo > div:nth-child(2)
+{
+    color: #f2f2f2;
+}
+div.productPromo > div:nth-child(2) > h3
+{
+    font-size: 1.5em;
+    margin: 0px;
+    padding: 10px;   
+}
+
+div.productPromo > div:nth-child(3)
+{
+    border-left: 1px solid black;
+
+}
+div.productPromo > div:nth-child(3) > p 
+{
+    font-size: 16px;
+    padding: 5px;
+    margin: 2px 2px 10px 2px ;
+}
+
+div.productPromo > div:nth-child(4)
+{
+    display: flex;
+    border: 1px solid black;
+}
+
+div.productPromo > div:nth-child(4) > div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 4em;
+}
+div.productPromo > div:nth-child(4) > div:nth-child(1)
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: rgb(114, 109, 109);
+    padding: 0px 0px 0 20px;
+}
+div.productPromo > div:nth-child(4) > div:nth-child(1) > span:first-child
+{
+    font-family: 'Roboto',sans-serif;
+    font-size: 1.2em;
+}
+div.productPromo > div:nth-child(4) > div:nth-child(1) > span:last-child
+{
+    font-size: 2em;
+}
+div.productPromo > div:nth-child(4) > div:nth-child(2)
+{
+    position: relative;
+}
+div.productPromo > div:nth-child(4) > div:nth-child(2) > a
+{
+    color: #f2f2f2;
+}
+div.productPromo > div:nth-child(4) > div:nth-child(2) > span
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #f2f2f2;
+    background-color: #f2f2f2;
+    height: 10px;
+    width: 10px;
+}
+
+/* css for prebuilt pcs */
+section.masthead
+{
+    width: 100%;
+    margin: 55px 0 0 0;
+}
+section.masthead > div > div.Blur
+{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,rgba(0,0,0,.5),rgba(0,0,0,0));
+}
+section.masthead > div > img
+{
+    width: 100%;
+    height: auto;
+} 
+
+
+
+
+/* ------- css for responsive layout of website------- */
+
+@media only screen and (max-width:1440px) 
+{
+}
+@media only screen and (max-width: 1280px)  
+{   
+    /* css for carosel masthead image */
+    div.slider > div#masthead1
+    {
+        
+        background-image: url('../img/masthead4_1280.jpg');
+    
+    }
+    div.slider > div#masthead3
+    {
+        
+        background-image: url('../img/masthead5_1280.jpg');
+    
+    }
+}
+@media only screen and (max-width: 1024px)  
+{
+    
+}
+@media only screen and (max-width:769px)  
+{
+}
+@media only screen and (max-width: 640px) 
+{
+    
+}
+@media only screen and (max-width: 426px) 
+{
+    
+}
+@media only screen and (max-width: 320px) 
+{
+    
+}
+
