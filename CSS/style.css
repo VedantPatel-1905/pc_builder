@@ -827,8 +827,99 @@ section.masthead > div > img
     height: auto;
 } 
 
+/* css for about section  */
+section.aboutMasthead
+{
+    margin: 57px 0 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #530e66;
 
+}
+section.aboutMasthead > div:first-child
+{
+    width: 60%;
+}
+section.aboutMasthead > div:last-child
+{
+    width: 30%;
+}
+section.aboutMasthead > div >h1
+{
+    font-size: 3.2em;
+    color: #e3d113;
+}
+section.aboutMasthead > div > p
+{
+    font-size: 1em;
+    color: #c8c7c7;
+    margin: 10px;
+}
+section.aboutMasthead > div > p:last-child
+{
+    font-weight: 700;
+}
+section.aboutMasthead > div >img
+{
+    width: 100%;
+    height: auto;
+    margin: 3em 0 0 0;
+}
 
+section.about
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section.about > div:first-child
+{
+    width: 40%;
+    margin: 0 0 0 7em;
+}
+section.about > div:last-child
+{
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+section.aboutLeft
+{
+    flex-direction: row-reverse;
+}
+section.aboutLeft > div:last-child
+{
+    justify-content: flex-start;
+}
+section.aboutLeft > div:first-child
+{
+    margin: 0px;
+}
+section.about > div > img
+{
+    width: 80%;
+    height: auto;
+}
+section.about > div > h2
+{
+    font-size: 2.4em;
+    color: #dea922;
+}
+section.about > div > p
+{
+    font-size: 1em;
+    color: #696868;
+    margin: 10px;
+    letter-spacing: 1px;
+}
+section.about > div > p > span
+{
+    color: #414040;
+    font-weight: 500;
+}
 
 /* ------- css for responsive layout of website------- */
 
