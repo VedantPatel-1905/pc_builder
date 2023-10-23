@@ -805,6 +805,32 @@ div.productPromo > div:nth-child(4) > div:nth-child(2) > span
     width: 10px;
 }
 
+/* css for Help me Choose section */
+section.chooseMasthead 
+{
+    width: 100%;
+    background-image: url('../img/chooseMasthead.jpg');
+    background-size: 100%;
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 75vh;
+}
+section.chooseMasthead > div
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+section.chooseMasthead > div > h1
+{
+    font-size: 3em;
+    color: goldenrod;
+}
+
 /* css for prebuilt pcs */
 section.masthead
 {
