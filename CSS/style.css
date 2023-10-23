@@ -92,11 +92,13 @@ header.indexHeader > div:nth-child(2) >a::after
 div.subHeader > nav
 {
     position: relative;
-    top: 91px;
+    top: 80px;
+    padding: 8px 0;
     z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(90deg,rgba(0,0,0,0),rgba(0,0,0,.5),rgba(0,0,0,.5),rgba(0,0,0,0));
 }
 div.subHeader > nav > menu
 {
@@ -112,25 +114,19 @@ div.subHeader > nav > menu > li
 }
 div.subHeader > nav > menu > li > a
 {
-    color: #0b8baf;
+    color: #c19b51;
     font-size: 1em;
-    transition: border .5 ease-in;
+    transition: all .5 ease-in;
+    padding: 6px 0 0 0;
 }
 div.subHeader > nav > menu > li > a:nth-child(1):hover,
 div.subHeader > nav > menu > li > a:nth-child(2):hover,
 div.subHeader > nav > menu > li > a:nth-child(3):hover,
 div.subHeader > nav > menu > li > a:nth-child(4):hover
 {
-    padding: 10px 0 0 0;
-    border-top: 3px solid #e3e4e4;
+    border-top: 2px solid #c19b51;
 }
-header.active1 > nav > menu > li > a#activeLink1,
-header.active2 > nav > menu > li > a#activeLink2,
-header.active3 > nav > menu > li > a#activeLink3,
-header.active4 > nav > menu > li > a#activeLink4
-{
-    border-bottom: 3px solid #0D4354;
-}
+
 /* css for hidden menu of website */
 .backgroundBlur 
 {
@@ -224,7 +220,7 @@ main
 /* css for carosel */
 section.productIntro
 {
-    margin: 55px 0 0 0 ;
+    /* margin: px 0 0 0 ; */
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -830,7 +826,7 @@ section.masthead > div > img
 /* css for about section  */
 section.aboutMasthead
 {
-    margin: 57px 0 0 0;
+    /* margin: 57px 0 0 0; */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -851,11 +847,16 @@ section.aboutMasthead > div >h1
     font-size: 3.2em;
     color: #e3d113;
 }
+section.aboutMasthead > div >h1
+{
+    font-size: 3.2em;
+    color: #e3d113;
+}
 section.aboutMasthead > div > p
 {
     font-size: 1em;
     color: #c8c7c7;
-    margin: 10px;
+    margin: 10px 0;
 }
 section.aboutMasthead > div > p:last-child
 {
@@ -865,7 +866,7 @@ section.aboutMasthead > div >img
 {
     width: 100%;
     height: auto;
-    margin: 3em 0 0 0;
+    margin: 5.2em 0 .5em 0;
 }
 
 section.about
@@ -903,10 +904,25 @@ section.about > div > img
     width: 80%;
     height: auto;
 }
+section.about > div
+{
+    position: relative;
+}
 section.about > div > h2
 {
     font-size: 2.4em;
     color: #dea922;
+}
+section.about > div > h2::before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    width: 100px;
+    height: 2px;
+    background: #c19b51;
+    transform: translateX(-40px);
 }
 section.about > div > p
 {
@@ -919,6 +935,156 @@ section.about > div > p > span
 {
     color: #414040;
     font-weight: 500;
+}
+
+/* Css for contact form */
+section.feedbackForm
+{
+    box-sizing: border-box;
+    width: 97%;
+    margin: 1%;
+    border-radius: 12px;
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: row;    
+}
+
+section.feedbackForm > div
+{
+    width: 50%;
+}
+section.feedbackForm > div:first-child
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #323131;
+    color: #f8f8f8;
+}
+
+section.feedbackForm > div:first-child >div
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin: 10px 0;
+}
+section.feedbackForm > div:first-child >div > h3
+{
+    font-size: 1.5em;
+}
+section.feedbackForm > div:first-child >div > div >p
+{
+    margin: 4px 0;
+    font-size: 1em;
+}
+section.feedbackForm > div:first-child >div > div:nth-child(2) >p
+{
+    width: 122px;
+}
+section.feedbackForm > div:first-child >div > div >p:nth-child(odd)
+{
+    font-weight: 700;
+}
+section.feedbackForm > div:first-child >div > div 
+{
+    position: relative;
+
+}
+section.feedbackForm > div:first-child >div > div::before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    width: 85px;
+    height: 2px;
+    background: #c19b51;
+    transform: translateX(-40px);
+
+}
+
+section.feedbackForm > div:first-child >div.feedbackHeading
+{
+    font-size: 2em;
+    position: relative;
+    margin: 1em 0;
+    border-bottom: 2px solid #c19b51;
+}
+section.feedbackForm > div:first-child >div.feedbackHeading::before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    width: 100px;
+    height: 2px;
+    background: #c19b51;
+    transform: translateX(-40px);
+}
+
+form.feedbackForm 
+{
+    max-width: 475px;
+    height: 94%;
+    box-sizing: border-box;
+    margin: 1em auto;
+    padding: 20px;
+    background-color: #C0DAF7;
+    border-radius: 5px;
+}
+  
+form.feedbackForm > h3 
+{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form.feedbackForm > div 
+{
+    margin-bottom: 20px;
+}
+
+form.feedbackForm > label 
+{
+    display: block;
+    margin-bottom: 5px;
+}
+
+form.feedbackForm  input[type="text"],
+form.feedbackForm  input[type="email"],
+form.feedbackForm  textarea 
+{
+     width: 95.2%;
+     padding: 8px;
+     border: 1px solid #ccc;
+     border-radius: 3px;
+}
+
+form.feedbackForm  textarea 
+{
+  resize: vertical;
+}
+
+form.feedbackForm  button[type="submit"] 
+{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #6b2ec6;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+form.feedbackForm  button[type="submit"]:hover 
+{
+    background-color: #5828a2;
 }
 
 /* ------- css for responsive layout of website------- */
