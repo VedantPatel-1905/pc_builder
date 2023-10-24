@@ -41,7 +41,7 @@ $(document).ready(function()
   // jquery  for masthead carousel
   arrowLeft = document.querySelector("#prev"),
   arrowRight = document.querySelector("#next"),
-  i = 1;
+  i = 2;
 
 
   // function to set interval between slides
@@ -57,7 +57,7 @@ $(document).ready(function()
   }
   function startSlide() {
     reset();
-    $('.slider > div#masthead1').css('display', 'flex');
+    $('.slider > div#masthead2').css('display', 'flex');
   }
 
 
