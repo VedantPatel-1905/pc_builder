@@ -98,7 +98,8 @@ div.subHeader > nav
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(90deg,rgba(0,0,0,0),rgba(0,0,0,.5),rgba(0,0,0,.5),rgba(0,0,0,0));
+    /* background: linear-gradient(90deg,rgba(0,0,0,0),rgba(0,0,0,.5),rgba(0,0,0,.5),rgba(0,0,0,0)); */
+    background-color: #1c1c1c;
 }
 div.subHeader > nav > menu
 {
@@ -249,7 +250,7 @@ section.productIntro > div >div>div
 }
 section.productIntro > div >div  >div> img
 {
-    margin: 45px 0 0 0;
+    margin: 55px 0 0 0;
     width: 32em;
     height: auto;
 }
@@ -607,7 +608,6 @@ section.prebuilt > div.productScroll >div >div:nth-child(5) >a
 }
 section.prebuilt > div.productScroll >div >div:nth-child(5) >a:hover
 {
-    background-color: #46227b;
     transform: scale(1.1);
 }
 /* css for customize your pc intro */
@@ -617,14 +617,21 @@ section.customizeIntro
     flex-direction: column;
     
 }
+section.customizeIntro > div:first-child 
+{
+    position: relative;
+    height: 120px;
+}
 section.customizeIntro > div:first-child > h2
 {
+    position: absolute;
     font-size: 2.4em;
-    background-color: #46227b;
+    background-color: #5828a2;
     color: #f2f2f2;
     width: 15em;
     margin-bottom: 0px;
     padding: .8em ;
+    top: 28px;
 }
 div.customizeIntro
 {
@@ -639,7 +646,11 @@ div.customizeIntro
 
 div.customizeIntro > div
 {
-    margin: 2em 0 0 0;
+    margin: 5em 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 div.customizeIntro > div > span
 {
@@ -666,8 +677,8 @@ div.customizeIntro > div > p
 /* css for pc pre built models */
 section.productPromo
 {
-    width: 100%;
-    
+    width: 85%;
+    margin: auto;
 }
 
 section.productPromo > h2
@@ -706,7 +717,6 @@ div.productPromo
 div.productPromo:hover
 {
     background-color: #ffffff;
-
 }
 div.productPromo > div
 {
@@ -739,7 +749,8 @@ div.productPromo > div:nth-child(2)
 }
 div.productPromo > div:nth-child(2) > h3
 {
-    font-size: 1.5em;
+    font-size: 1.8em;
+    line-height: 50px;
     margin: 0px;
     padding: 10px;   
 }
@@ -747,13 +758,18 @@ div.productPromo > div:nth-child(2) > h3
 div.productPromo > div:nth-child(3)
 {
     border-left: 1px solid black;
-
+    flex: 1;
 }
 div.productPromo > div:nth-child(3) > p 
 {
     font-size: 16px;
     padding: 5px;
     margin: 2px 2px 10px 2px ;
+}
+div.productPromo > div:nth-child(3) > p:last-of-type 
+{
+    font-weight: bold;
+    font-size: 17px;
 }
 
 div.productPromo > div:nth-child(4)
@@ -810,7 +826,6 @@ div.productPromo > div:nth-child(4) > div:nth-child(2) > span
 section.masthead
 {
     width: 100%;
-    margin: 55px 0 0 0;
 }
 section.masthead > div > div.Blur
 {
@@ -875,6 +890,7 @@ section.about
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #151515;
 }
 section.about > div:first-child
 {
@@ -929,14 +945,14 @@ section.about > div > h2::before
 section.about > div > p
 {
     font-size: 1em;
-    color: #696868;
+    color: #f8f8f8;
     margin: 10px;
     letter-spacing: 1px;
 }
 section.about > div > p > span
 {
-    color: #414040;
-    font-weight: 500;
+    color: #ffffff;
+    font-weight: 700;
 }
 
 /* css for Help me Choose section */
@@ -1154,17 +1170,65 @@ form.feedbackForm  button[type="submit"]:hover
         background-image: url('../img/masthead5_1280.jpg');
     
     }
+
+    /* css for about section */
+    section.about > div:first-child
+    {
+        width: 50%;
+        margin: 0 0 0 5em;
+    }
 }
 @media only screen and (max-width: 1024px)  
 {
-    
+    /* css  for secondary nav bar */
+    div.subHeader > nav
+    {
+        display: none;
+    }
+
+    /* css for about section */
+    section.aboutMasthead
+    {
+        margin: 57px 0 0 0;
+    }
+    section.about,
+    section.aboutLeft
+    {
+        flex-direction: column-reverse;
+    }
+    section.about > div:last-child 
+    {
+        width: 100%;
+    }
+    section.about > div > h2::before
+    {
+        display: none;
+    }
+    section.about > div:first-child 
+    {
+        width: 80%;
+        margin: auto;
+    }
+    section.about > div > img {
+        width: 100%;
+    }
 }
 @media only screen and (max-width:769px)  
 {
+    /* css for about section */
+    section.aboutMasthead > div:last-child 
+    {
+        display: none;
+    }
+    section.aboutMasthead > div:first-child {
+        width: 90%;
+    }
 }
 @media only screen and (max-width: 640px) 
 {
-    
+    section.aboutMasthead > div >h1 {
+        font-size: 2.8em;
+    }
 }
 @media only screen and (max-width: 426px) 
 {
