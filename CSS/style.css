@@ -57,12 +57,53 @@ header.indexHeader > div:last-child > button
     width: auto;
     border: none;
     background: none;
+    position: relative;
 }
 header.indexHeader > div:first-child > button >img,
 header.indexHeader > div:last-child > button >img
 {
     height: 40px;
     width: auto;
+}
+header.indexHeader > div:first-child > button > span,
+header.indexHeader > div:first-child > button > span::before,
+header.indexHeader > div:first-child > button > span::after
+{
+    display: flex;
+    height: 3px;
+    width: 42px;
+    border-radius: 3px;
+    background-color: goldenrod;
+    transition: all .3s ease-in-out;
+}
+header.indexHeader > div:first-child > button > span::before
+{
+    transition: all .4s ease-in-out;
+    content: '';
+    position: absolute;
+    top: 35px;
+}
+header.indexHeader > div:first-child > button > span::after
+{
+    transition: all .4s ease-in-out;
+    content: '';
+    position: absolute;
+    bottom: 35px;
+}
+header.indexHeader > div:first-child > button > span.navBtnCross
+{
+    background-color: transparent;
+}
+header.indexHeader > div:first-child > button > span.navBtnCross::before
+{
+    top: 48%;
+    transform: rotate(45deg);
+}
+header.indexHeader > div:first-child > button > span.navBtnCross::after
+{
+    bottom: 48%;
+    transform: rotate(-45deg);
+   
 }
 
 header.indexHeader > div:nth-child(2) >a 
@@ -531,9 +572,6 @@ section.prebuilt > div.productScroll >div p
 }
 section.prebuilt > div.productScroll >div
 {
-    width: 40%;
-    display: flex;
-    flex-direction: row;
     display: flex;
     flex-direction: column;
     margin: 1em 3em;
@@ -543,8 +581,8 @@ section.prebuilt > div.productScroll >div >div:first-child
 {
     display: flex;
     border-radius: 3px;
-    width: 300px;
-    height: 250px;
+    height: 300px;
+    width: 250px;
     justify-content: center;  
     align-content: center;
 }
@@ -567,6 +605,10 @@ section.prebuilt > div.productScroll >div >div:nth-child(3)
     flex-direction: column;
     padding: 0 10px;
     border-bottom: 1px solid #b3b1b1 ;
+}
+section.prebuilt > div.productScroll >div >div:nth-child(3)
+{
+    flex: 1;
 }
 section.prebuilt > div.productScroll >div >div:nth-child(2) > p
 {
@@ -714,7 +756,8 @@ div.productPromo
     max-width: 30%;    
     border-radius: 5px;
 }
-div.productPromo:hover
+div.productPromo:hover,
+div.productPromo:hover span.cutCorner
 {
     background-color: #ffffff;
 }
@@ -735,7 +778,7 @@ div.productPromo > div > img
 
 div.productPromo div.matchColor
 {
-    background-color: #353436;
+    background-color: #3D1473;
     
 }
 div.productPromo > div:first-child  div.matchColor:hover
@@ -811,16 +854,22 @@ div.productPromo > div:nth-child(4) > div:nth-child(2) > a
 {
     color: #f2f2f2;
 }
-div.productPromo > div:nth-child(4) > div:nth-child(2) > span
+
+div.matchColor
 {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    border: 1px solid #f2f2f2;
-    background-color: #f2f2f2;
-    height: 10px;
-    width: 10px;
+    position: relative;
 }
+div.productPromo span.cutCorner
+{
+    background-color: rgb(242, 242, 242);
+    position: absolute;
+    right: -10px;
+    bottom: -15px;
+    height: 40px;
+    width: 20px;
+    transform: rotate(45deg);
+}
+
 
 /* css for prebuilt pcs */
 section.masthead
@@ -837,6 +886,10 @@ section.masthead > div > img
 {
     width: 100%;
     height: auto;
+} 
+section.masthead > div > img:nth-of-type(2)
+{
+    display: none;
 } 
 
 /* css for about section  */
@@ -1168,7 +1221,7 @@ form.feedbackForm  button[type="submit"]:hover
     {
         
         background-image: url('../img/masthead5_1280.jpg');
-    
+        
     }
 
     /* css for about section */
@@ -1176,6 +1229,12 @@ form.feedbackForm  button[type="submit"]:hover
     {
         width: 50%;
         margin: 0 0 0 5em;
+    }
+
+    /* css for pre built pc scroll */
+    div.productPromo 
+    {
+        max-width: 40%;
     }
 }
 @media only screen and (max-width: 1024px)  
@@ -1212,6 +1271,13 @@ form.feedbackForm  button[type="submit"]:hover
     section.about > div > img {
         width: 100%;
     }
+
+    /* css for pre built pc scroll */
+    section.masthead 
+    {
+        margin: 70px 0 0 0;
+    }
+    
 }
 @media only screen and (max-width:769px)  
 {
@@ -1223,11 +1289,37 @@ form.feedbackForm  button[type="submit"]:hover
     section.aboutMasthead > div:first-child {
         width: 90%;
     }
+    /* css for pre built pc scroll */
+    section.masthead > div > img:nth-of-type(1)
+    {
+        display: none;
+    }
+    section.masthead > div > img:last-child 
+    {
+        display: flex;
+    }
+    div.productPromo 
+    {
+        max-width: 60%;
+    }
+    div.productPromo > div:nth-child(4) > div
+    {
+        width: 100%;
+    }
+    div.productPromo > div:nth-child(4) 
+    {
+        flex-direction: column;
+    }
 }
 @media only screen and (max-width: 640px) 
 {
     section.aboutMasthead > div >h1 {
         font-size: 2.8em;
+    }
+    /* css for pre built pc scroll */
+    div.productPromo 
+    {
+        max-width: 100%;
     }
 }
 @media only screen and (max-width: 426px) 

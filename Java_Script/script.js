@@ -3,6 +3,7 @@ function showMenu()
 {
   document.getElementById('hiddenMenu').classList.toggle('showMenu');
   document.querySelector('.backgroundBlur').classList.toggle('showMenu');
+  document.querySelector('.navBtn').classList.toggle('navBtnCross');
 }
 
 // this even listener ensure that html is loaded first
