@@ -551,7 +551,6 @@ section.prebuilt > div.productScroll
 
 }
 /* scrolling section of the product  */
-
 section.prebuilt > div.productScroll
 {
     display: flex;
@@ -568,18 +567,18 @@ section.prebuilt > div.productScroll::-webkit-scrollbar
     /* this is to hide scrollbar  */
     display: none;
 }
-section.prebuilt > div.productScroll >div p
+section.prebuilt > div.productScroll >article p
 {
     padding: 3px 0;
 }
-section.prebuilt > div.productScroll >div
+section.prebuilt > div.productScroll >article
 {
     display: flex;
     flex-direction: column;
     margin: 1em 3em;
     
 }
-section.prebuilt > div.productScroll >div >div:first-child
+section.prebuilt > div.productScroll >article >div:first-child
 {
     display: flex;
     border-radius: 3px;
@@ -588,59 +587,59 @@ section.prebuilt > div.productScroll >div >div:first-child
     justify-content: center;  
     align-content: center;
 }
-section.prebuilt > div.productScroll >div >div:first-child:hover >img
+section.prebuilt > div.productScroll >article >div:first-child:hover >img
 {
     max-width: 270px;
     max-height: 275px;
     
 }
-section.prebuilt > div.productScroll >div >div:first-child >img
+section.prebuilt > div.productScroll >article >div:first-child >img
 {
     transition: all .3s ease-in-out;
     margin: auto;
     max-width: 250px;
 }
-section.prebuilt > div.productScroll >div >div:nth-child(2),
-section.prebuilt > div.productScroll >div >div:nth-child(3)
+section.prebuilt > div.productScroll >article >div:nth-child(2),
+section.prebuilt > div.productScroll >article >div:nth-child(3)
 {
     display: flex;
     flex-direction: column;
     padding: 0 10px;
     border-bottom: 1px solid #b3b1b1 ;
 }
-section.prebuilt > div.productScroll >div >div:nth-child(3)
+section.prebuilt > div.productScroll >article >div:nth-child(3)
 {
     flex: 1;
 }
-section.prebuilt > div.productScroll >div >div:nth-child(2) > p
+section.prebuilt > div.productScroll >article >div:nth-child(2) > p
 {
     font-size: .9em;
     color: #6f6f6f;
     margin: 0px;
 }
-section.prebuilt > div.productScroll >div >div:nth-child(3) > p:first-child
+section.prebuilt > div.productScroll >article >div:nth-child(3) > p:first-child
 {
     font-size: 1em;
     font-weight: 500;
     margin: 0px;
 }
-section.prebuilt > div.productScroll >div >div:nth-child(3) > p.productScroll
+section.prebuilt > div.productScroll >article >div:nth-child(3) > p.productScroll
 {
     font-size: .9em;
     color: #6f6f6f;
     margin: 0px;
 }
-section.prebuilt > div.productScroll >div >div:nth-child(4) 
+section.prebuilt > div.productScroll >article >div:nth-child(4) 
 {
     text-align: center;
     font-size: 1.2em;
     padding: 10px 0;
 }
-section.prebuilt > div.productScroll >div >div:nth-child(5)
+section.prebuilt > div.productScroll >article >div:nth-child(5)
 {
     text-align: center;
 }
-section.prebuilt > div.productScroll >div >div:nth-child(5) >a
+section.prebuilt > div.productScroll >article >div:nth-child(5) >a
 {
     display: block;
     padding: 10px 0;
@@ -650,7 +649,7 @@ section.prebuilt > div.productScroll >div >div:nth-child(5) >a
     transition: all .2s ease-in-out;
     color: #f2f2f2;
 }
-section.prebuilt > div.productScroll >div >div:nth-child(5) >a:hover
+section.prebuilt > div.productScroll >article >div:nth-child(5) >a:hover
 {
     transform: scale(1.1);
 }
@@ -728,8 +727,8 @@ section.customizeIntro > div:first-child > h2
 {
     position: absolute;
     font-size: 2.4em;
-    background-color: #2d283e;
-    color: #802bb1;
+    background-color: #30135B;
+    color: goldenrod;
     width: 15em;
     margin-bottom: 0px;
     padding: .8em ;
@@ -776,6 +775,207 @@ div.customizeIntro > div > p
     font-size: 1em;
     padding: 10px 0 0 0;
 }
+
+/* css for customize model case */
+section.case
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    position: relative;
+
+}
+section.case > div:last-child
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+section.case > div:last-child >h2
+{
+    position: relative;
+    font-weight: 700;
+    padding: 1em 0 0 0;
+    box-sizing: border-box;
+    width: 90%;
+    background-color: #30135B;
+    color: goldenrod;
+    font-size: 2.4em;
+    padding: 0.8em;
+}
+section.case > div:last-child >h2 >span
+{
+    display: inline-block;
+    background-color: #000000;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    background: linear-gradient(135deg,transparent 50%, #ffffff 0);
+    bottom: 0;
+    right: 0;
+}
+
+section.case > div:last-child> div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+section.case > div:last-child> div>p
+{
+    text-align: center;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* scrolling section of the product  */
+section.case > div.productScroll
+{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    overflow: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-snap-align: start;
+    justify-content: center;
+    align-items: center;
+}
+section.case > div.productScroll::-webkit-scrollbar
+{
+    /* this is to hide scrollbar  */
+    display: none;
+}
+div.sliderBtn
+{
+    position: absolute;
+    z-index: 2;
+    background: none;
+    cursor: pointer;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.485);
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+div.sliderBtn:focus,
+div.sliderBtn:hover
+{
+    color: #f8f8f8;
+}
+div.sliderBtn:focus
+{
+    outline: 1px solid black;
+}
+
+div.sliderBtn#prev
+{
+    left: 3.3rem;
+}
+div.sliderBtn#next
+{
+    left: 38.3rem;
+}
+section.case > div.productScroll >div p
+{
+    padding: 3px 0;
+}
+section.case > div.productScroll >div
+{
+    display: none;
+    width: 55%;
+    flex-direction: column;
+    margin: 1em 3em;
+    
+}
+section.case > div.productScroll >div.visible
+{
+    display: flex;
+}
+section.case > div.productScroll >div >div:first-child
+{
+    display: flex;
+    border-radius: 3px;
+    height: 225px;
+    width: 100%;
+    justify-content: center;  
+    align-content: center;
+}
+section.case > div.productScroll >div >div:first-child:hover >img
+{
+    max-width: 270px;
+    max-height: 275px;
+    
+}
+section.case > div.productScroll >div >div:first-child >img
+{
+    transition: all .3s ease-in-out;
+    margin: auto;
+    max-width: 250px;
+}
+section.case > div.productScroll >div >div:nth-child(2),
+section.case > div.productScroll >div >div:nth-child(3)
+{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    border-bottom: 1px solid #b3b1b1 ;
+}
+section.case > div.productScroll >div >div:nth-child(3)
+{
+    flex: 1;
+}
+section.case > div.productScroll >div >div:nth-child(2) > p
+{
+    font-size: .9em;
+    color: #6f6f6f;
+    margin: 0px;
+}
+section.case > div.productScroll >div >div:nth-child(3) > p:first-child
+{
+    font-size: 1em;
+    font-weight: 500;
+    margin: 0px;
+}
+section.case > div.productScroll >div >div:nth-child(3) > p.productScroll
+{
+    font-size: .9em;
+    color: #6f6f6f;
+    margin: 0px;
+}
+section.case > div.productScroll >div >div:nth-child(4) 
+{
+    text-align: center;
+    font-size: 1.2em;
+    padding: 10px 0;
+}
+section.case > div.productScroll >div >div:nth-child(5)
+{
+    text-align: center;
+}
+section.case > div.productScroll >div >div:nth-child(5) >a
+{
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #5828a2;
+    transition: all .2s ease-in-out;
+    color: #f2f2f2;
+}
+section.case > div.productScroll >div >div:nth-child(5) >a:hover
+{
+    transform: scale(1.1);
+}
+
 
 /* css for pc pre built models */
 section.productPromo

@@ -23,22 +23,6 @@ $(document).ready(function()
     $('div.backgroundBlur').load('hiddenMenu.html');
   });
 
-  // after this point margin will stop increasing
-  var stopPoint = 3400; 
-
-  // // This function will increase the top margrin of the side bar to make it feel like fixed
-  // $(window).scroll(function() 
-  // {
-  //   // this inbuilt fuction will calculate the px when user scrolls up or down
-  //   var scrollTop = $(window).scrollTop();
-  //   if (scrollTop < stopPoint) 
-  //   {
-  //     var newMargin = 50 + scrollTop * 0.1; 
-  //     $('.fixedDiv').css('margin-top', newMargin + 'px');
-  //   }
-  // });
-
-
   // jquery  for masthead carousel
   arrowLeft = document.querySelector("#prev"),
   arrowRight = document.querySelector("#next"),
@@ -105,6 +89,35 @@ $(document).ready(function()
   startSlide();
 // startSlider();
   
+const slides = document.querySelectorAll("div.productScroll > div");
+let currentSlide = 0; 
+
+const nextBtn = document.querySelector("#next");
+const prevBtn = document.querySelector("#prev");
+
+nextBtn.addEventListener("click", () => {
+  currentSlide++;
+  if(currentSlide > slides.length - 1) {
+    currentSlide = 0;
+  }
+  setActiveSlide();
+});
+
+prevBtn.addEventListener("click", () => {
+  currentSlide--;
+  if(currentSlide < 0) {
+    currentSlide = slides.length - 1;
+  }  
+  setActiveSlide();
+});
+
+function setActiveSlide() {
+  slides.forEach(slide => {
+    slide.classList.remove("visible");  
+  });
+
+  slides[currentSlide].classList.add("visible");
+}
 
   
 
