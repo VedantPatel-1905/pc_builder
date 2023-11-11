@@ -140,6 +140,7 @@ div.subHeader > nav
     justify-content: center;
     align-items: center;
     /* background: linear-gradient(90deg,rgba(0,0,0,0),rgba(0,0,0,.5),rgba(0,0,0,.5),rgba(0,0,0,0)); */
+    /* background-color: #2d283e; */
     background-color: #1c1c1c;
 }
 div.subHeader > nav > menu
@@ -157,6 +158,7 @@ div.subHeader > nav > menu > li
 div.subHeader > nav > menu > li > a
 {
     color: #c19b51;
+    /* color: #802bb1; */
     font-size: 1em;
     transition: all .5 ease-in;
     padding: 6px 0 0 0;
@@ -652,6 +654,64 @@ section.prebuilt > div.productScroll >div >div:nth-child(5) >a:hover
 {
     transform: scale(1.1);
 }
+
+/* css for customize pc webpage */
+section.customizeMasthead
+{
+    display: flex;
+}
+section.customizeMasthead 
+{
+    margin: 4em 0 0 0;
+    width: 100%;
+    height: 34em;
+    background-image: url('../img/customizeMasthead.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+section.customizeMasthead > div:nth-child(1)
+{
+    text-align: left;
+    padding: 72px 0 0 6rem;
+}
+section.customizeMasthead > div > span
+{
+    background-color: #1f1f1f;
+    color: #f8f8f8;
+    font-family: 'Rubik', sans-serif;
+    padding: 5px 2rem;
+}
+section.customizeMasthead > div > h1
+{
+    font-size: 3em;
+}
+section.customizeMasthead > div > p:nth-child(3)
+{
+    font-size: 1.3em;
+}
+section.customizeMasthead > div > p:nth-child(4)
+{
+    font-size: 1em;
+    font-style: italic;
+}
+section.customizeMasthead > div > a> span
+{
+    background-color: #6b2ec6;
+    color: #f8f8f8;
+    margin: 2rem 0 0 0;
+    padding: 10px 2.5rem;
+    border-radius: 5px;
+    box-shadow: 1px 2px 6px #422a54;
+    font-size: 1.3rem;
+    line-height: 6rem;
+    transition: all .3s ease-in-out;
+}
+section.customizeMasthead > div > a> span:hover
+{
+    background-color: #5828a2;
+    padding: 11px 2.6rem;
+}
+
 /* css for customize your pc intro */
 section.customizeIntro
 {
@@ -668,8 +728,8 @@ section.customizeIntro > div:first-child > h2
 {
     position: absolute;
     font-size: 2.4em;
-    background-color: #5828a2;
-    color: #f2f2f2;
+    background-color: #2d283e;
+    color: #802bb1;
     width: 15em;
     margin-bottom: 0px;
     padding: .8em ;
@@ -716,6 +776,7 @@ div.customizeIntro > div > p
     font-size: 1em;
     padding: 10px 0 0 0;
 }
+
 /* css for pc pre built models */
 section.productPromo
 {
@@ -836,6 +897,7 @@ div.productPromo > div:nth-child(4) > div:nth-child(1)
 {
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     align-items: flex-start;
     color: rgb(114, 109, 109);
     padding: 0px 0px 0 20px;
