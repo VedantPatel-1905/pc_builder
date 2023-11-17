@@ -784,14 +784,14 @@ section.case
     flex-direction: row;
     background-color: #ffffff;
     position: relative;
-
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 1em 0;
 }
 section.case > div:last-child
 {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 50%;
+    width: 100%;
 }
 section.case > div:last-child >h2
 {
@@ -799,7 +799,8 @@ section.case > div:last-child >h2
     font-weight: 700;
     padding: 1em 0 0 0;
     box-sizing: border-box;
-    width: 90%;
+    width: 40%;
+    margin: 0 0 1em 0;
     background-color: #30135B;
     color: goldenrod;
     font-size: 2.4em;
@@ -820,9 +821,15 @@ section.case > div:last-child >h2 >span
 section.case > div:last-child> div
 {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-grow: 1;
+}
+section.case > div:last-child> div >div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 section.case > div:last-child> div>p
 {
@@ -836,9 +843,17 @@ section.case > div:last-child> div>p
 /* scrolling section of the product  */
 section.case > div.productScroll
 {
-    display: flex;
+    display: none;
     flex-direction: row;
     width: 50%;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.8);
     overflow: hidden;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
@@ -846,30 +861,43 @@ section.case > div.productScroll
     justify-content: center;
     align-items: center;
 }
+section.case > div.productScroll.visible
+{
+    display: flex;
+}
 section.case > div.productScroll::-webkit-scrollbar
 {
     /* this is to hide scrollbar  */
     display: none;
 }
+div.close,
 div.sliderBtn
 {
-    position: absolute;
+    position: fixed;
     z-index: 2;
     background: none;
     cursor: pointer;
     border: none;
     height: 3em;
     width: auto;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     font-size: 2em;
     top: 50%;
+    z-index: 101;
     transform: translateY(-50%);
     color: #30135B;
     border-radius: .25rem;
     padding: 0 .5rem;
     background-color: rgba(0, 0, 0, 0.1);
+}
+div.close
+{
+    height: 1.5em;
+    width: 1.5em;
+    top: 20%;
+    right: 28%;    
 }
 div.sliderBtn:focus,
 div.sliderBtn:hover
@@ -881,13 +909,13 @@ div.sliderBtn:focus
     outline: 1px solid black;
 }
 
-div.sliderBtn#prev
+div.sliderBtn.pre
 {
-    left: 3.3rem;
+    left: 30%;
 }
-div.sliderBtn#next
+div.sliderBtn.nex
 {
-    left: 38.3rem;
+    left: 68%;
 }
 section.case > div.productScroll >div p
 {
@@ -896,15 +924,20 @@ section.case > div.productScroll >div p
 section.case > div.productScroll >div
 {
     display: none;
-    width: 55%;
+    width: 30%;
+    padding: 1em 7em;
+    border-radius: 5px;
     flex-direction: column;
     margin: 1em 3em;
+    background-color: #f8f8f8;
     
 }
-section.case > div.productScroll >div.visible
+section.case > div.productScroll >div.visible,
+div.visible
 {
     display: flex;
 }
+
 section.case > div.productScroll >div >div:first-child
 {
     display: flex;
@@ -913,6 +946,7 @@ section.case > div.productScroll >div >div:first-child
     width: 100%;
     justify-content: center;  
     align-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 section.case > div.productScroll >div >div:first-child:hover >img
 {
@@ -996,7 +1030,7 @@ section.productPromo > h2
     color: #efefef;
     background-color: #6b2ec6;
     height: 3em;
-    margin: 0px;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;

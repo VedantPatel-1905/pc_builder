@@ -89,37 +89,55 @@ $(document).ready(function()
   startSlide();
 // startSlider();
   
-const slides = document.querySelectorAll("div.productScroll > div");
-let currentSlide = 0; 
-
-const nextBtn = document.querySelector("#next");
-const prevBtn = document.querySelector("#prev");
-
-nextBtn.addEventListener("click", () => {
-  currentSlide++;
-  if(currentSlide > slides.length - 1) {
-    currentSlide = 0;
-  }
-  setActiveSlide();
-});
-
-prevBtn.addEventListener("click", () => {
-  currentSlide--;
-  if(currentSlide < 0) {
-    currentSlide = slides.length - 1;
-  }  
-  setActiveSlide();
-});
-
-function setActiveSlide() {
-  slides.forEach(slide => {
-    slide.classList.remove("visible");  
+const slides1 = document.querySelectorAll("div.productScroll1 > div");
+const slides2 = document.querySelectorAll("div.productScroll2 > div");
+slider(slides1);
+slider(slides2);
+function slider(slides) {
+  let currentSlide = 0; 
+  
+  const nextBtn = document.querySelector("#next");
+  const prevBtn = document.querySelector("#prev");
+  
+  nextBtn.addEventListener("click", () => {
+    currentSlide++;
+    if(currentSlide > slides.length - 1) {
+      currentSlide = 0;
+    }
+    setActiveSlide();
   });
-
-  slides[currentSlide].classList.add("visible");
+  
+  prevBtn.addEventListener("click", () => {
+    currentSlide--;
+    if(currentSlide < 0) {
+      currentSlide = slides.length - 1;
+    }  
+    setActiveSlide();
+  });
+  
+  function setActiveSlide() {
+    slides.forEach(slide => {
+      slide.classList.remove("visible");  
+    });
+    
+    slides[currentSlide].classList.add("visible");
+  }
 }
 
-  
+const close = document.querySelector("div.close")
+close.addEventListener("click", () =>{
+  document.querySelector("section.case > div.productScroll").classList.remove("visible");
+  document.querySelector("div.pre").classList.remove("visible");
+  document.querySelector("div.nex").classList.remove("visible");
+  document.querySelector("div.close").classList.remove("visible");
+});
+const open = document.querySelector("button.open")
+open.addEventListener("click", () =>{
+  document.querySelector("section.case > div.productScroll").classList.add("visible");
+  document.querySelector("div.pre").classList.add("visible");
+  document.querySelector("div.nex").classList.add("visible");
+  document.querySelector("div.close").classList.add("visible");
+});
 
 });
 
