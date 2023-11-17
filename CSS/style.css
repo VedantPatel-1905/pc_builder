@@ -1342,6 +1342,70 @@ section.aboutLeft > div:first-child
     margin: 0 7em 0 7em;
 }
 
+/* Css for support page */
+section.support,
+section.Header
+{
+    background-color: #efefef;
+    display: flex;
+    justify-content: center;
+    padding: 2em 0 0 0;
+}
+section.supportOdd
+{
+    background-color: #530e66;
+    color: #efefef;
+}
+section.Header > div
+{
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    position: relative;
+}
+section.Header > div h2,
+section.support > div h2
+{
+    color: goldenrod;
+    font-size: 2.9em;
+    margin: 0px;
+}
+
+section.support > div h2::before 
+{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    /* top: 0; */
+    left: 0;
+    width: 10em;
+    height: 2px;
+    background: #c19b51;
+    transform: translateX(-40px);
+}
+section.Header > div p,
+section.support > div p
+{
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+section.support > div
+{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+section.support > div >div:first-child
+{
+    width: 45%;
+}
+
+section.support > div >div:last-child
+{
+    width: 50%;
+}
 /* Css for contact form */
 section.feedbackForm
 {
