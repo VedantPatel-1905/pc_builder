@@ -654,6 +654,47 @@ section.prebuilt > div.productScroll >article >div:nth-child(5) >a:hover
     transform: scale(1.1);
 }
 
+/* css for homepage links to other pages */
+section.connection
+{
+    display: flex;
+}
+section.connection > div
+{
+    border: 1px solid #000000;
+}
+section.connection > div:last-child
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+}
+
+section.connection > div:first-child
+{
+    padding: 1em 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 55%;
+}
+section.connection > div:first-child > div:nth-of-type(1)
+{
+    height: 16em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.connection > div:first-child > div:nth-of-type(1) > img
+{
+    height: 100%;
+    width: auto;
+}
+
 /* css for customize pc webpage */
 section.customizeMasthead
 {
@@ -1530,8 +1571,10 @@ section.feedbackForm > div:first-child
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #323131;
-    color: #f8f8f8;
+    background-color: #f8f8f8;
+    color: #323131;
+    border-radius: 12px 0 0 12px;
+
 }
 
 section.feedbackForm > div:first-child >div
@@ -1545,6 +1588,7 @@ section.feedbackForm > div:first-child >div
 section.feedbackForm > div:first-child >div > h3
 {
     font-size: 1.5em;
+    z-index: 2;
 }
 section.feedbackForm > div:first-child >div > div >p
 {
@@ -1603,7 +1647,7 @@ form.feedbackForm
     box-sizing: border-box;
     margin: 1em auto;
     padding: 20px;
-    background-color: #C0DAF7;
+    background-color: #673AB7;
     border-radius: 5px;
 }
   
@@ -1628,10 +1672,11 @@ form.feedbackForm  input[type="text"],
 form.feedbackForm  input[type="email"],
 form.feedbackForm  textarea 
 {
-     width: 95.2%;
-     padding: 8px;
-     border: 1px solid #ccc;
-     border-radius: 3px;
+    background-color: #D1C4E9;
+    width: 95.2%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
 
 form.feedbackForm  textarea 
@@ -1644,7 +1689,7 @@ form.feedbackForm  button[type="submit"]
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #6b2ec6;
+    background-color: #9575CD;
     color: #fff;
     border: none;
     border-radius: 3px;
@@ -1692,6 +1737,16 @@ form.feedbackForm  button[type="submit"]:hover
     {
         max-width: 40%;
     }
+
+    /* css for contact form */
+    section.feedbackForm > div:first-child >div > div::before
+    {
+        width: 50px;
+    }
+    section.feedbackForm > div:first-child >div.feedbackHeading 
+    {
+        font-size: 1.6em;
+    }
 }
 @media only screen and (max-width: 1024px)  
 {
@@ -1733,7 +1788,28 @@ form.feedbackForm  button[type="submit"]:hover
     {
         margin: 70px 0 0 0;
     }
+    /* css for contact form */
+    section.feedbackForm > div:first-child >div > div::before
+    {
+        width: 0px;
+    }
     
+}
+@media only screen and (max-width: 850px)  
+{
+    /* css for contact form */
+    section.feedbackForm > div:first-child >div > div::before
+    {
+        width: 100px;
+    }
+    section.feedbackForm
+    {
+        flex-direction: column;
+    }
+    section.feedbackForm > div
+    {
+        width: 100%;
+    }
 }
 @media only screen and (max-width:769px)  
 {
@@ -1777,10 +1853,24 @@ form.feedbackForm  button[type="submit"]:hover
     {
         max-width: 100%;
     }
+    /* css for contact form */
+    
+    section.feedbackForm > div:first-child >div
+    {
+        flex-direction: column;
+    }
+    section.feedbackForm > div:first-child >div > div:nth-child(2) >p
+    {
+        width: 100%;
+    }
 }
 @media only screen and (max-width: 426px) 
 {
-    
+    /* css for contact form */
+    section.feedbackForm > div:first-child >div > div::before
+    {
+        width: 0px;
+    }
 }
 @media only screen and (max-width: 320px) 
 {
