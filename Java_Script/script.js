@@ -34,6 +34,7 @@ $(document).ready(function()
     interval = setInterval(function() {
       i = i>4  ? 1 : i;
       slideRight();
+      console.log(i);
     }, 3000);
   }
   // Clear all masthead div
@@ -50,19 +51,22 @@ $(document).ready(function()
   function slideLeft() {
     reset();
     $('.slider > div#masthead' + i).css('display', 'flex');
+    i--;
   }
   
   // Show next slide
   function slideRight() {
     reset();
+    console.log(i);
     $('.slider > div#masthead' + i).css('display', 'flex');
+    i++;
   }
   
   // Left arrow click
   arrowLeft.addEventListener("click", function() 
   {
-    // clearInterval(interval);
-    i--;
+    clearInterval(interval);
+    // i--;
     i = i<=0 ? 4 : i;
     slideLeft();
   });
@@ -70,49 +74,50 @@ $(document).ready(function()
   // Right arrow click
   arrowRight.addEventListener("click", function() 
   {
-    // clearInterval(interval);
-    i++;
+    clearInterval(interval);
+    // i++;
     i = i>=5 ? 1 : i;
     slideRight();
   });
 
   //function to stop slider on mouseover
-  // $('.slider').on('mouseover',function() {
-  //   clearInterval(interval);
-  // });
+  $('.slider').on('mouseover',function() {
+    clearInterval(interval);
+  });
 
   //function to start slider on mouseout
-  // $('.slider').on('mouseleave',function() {
-  //   startSlider()
-  // });
+  $('.slider').on('mouseleave',function() {
+    startSlider()
+  });
 
   startSlide();
-// startSlider();
   
-const slides1 = document.querySelectorAll("div.productScroll1 > div");
-const slides2 = document.querySelectorAll("div.productScroll2 > div");
-slider(slides1);
-slider(slides2);
-function slider(slides) {
+function slider(slide) 
+{
+  const slides = document.querySelectorAll("section."+slide+">div.productScroll > div");
   let currentSlide = 0; 
   
-  const nextBtn = document.querySelector("#next");
-  const prevBtn = document.querySelector("#prev");
-  
-  nextBtn.addEventListener("click", () => {
-    currentSlide++;
-    if(currentSlide > slides.length - 1) {
-      currentSlide = 0;
-    }
-    setActiveSlide();
+  const nextBtn = document.querySelectorAll("#next");
+  const prevBtn = document.querySelectorAll("#prev");
+
+  nextBtn.forEach(next => {
+    next.addEventListener("click", () => {
+      currentSlide++;
+      if(currentSlide > slides.length - 1) {
+        currentSlide = 0;
+      }
+      setActiveSlide();
+    });
   });
   
-  prevBtn.addEventListener("click", () => {
-    currentSlide--;
-    if(currentSlide < 0) {
-      currentSlide = slides.length - 1;
-    }  
-    setActiveSlide();
+  prevBtn.forEach(previous => {
+    previous.addEventListener("click", () => {
+      currentSlide--;
+      if(currentSlide < 0) {
+        currentSlide = slides.length - 1;
+      }  
+      setActiveSlide();
+    });
   });
   
   function setActiveSlide() {
@@ -124,20 +129,27 @@ function slider(slides) {
   }
 }
 
-const close = document.querySelector("div.close")
-close.addEventListener("click", () =>{
-  document.querySelector("section.case > div.productScroll").classList.remove("visible");
-  document.querySelector("div.pre").classList.remove("visible");
-  document.querySelector("div.nex").classList.remove("visible");
-  document.querySelector("div.close").classList.remove("visible");
+const closes = document.querySelectorAll("div.close")
+closes.forEach(close => {
+  close.addEventListener("click", () =>{
+    document.querySelector("section."+close.classList[1]+"> div.productScroll").classList.remove("visible");
+    document.querySelector("section."+close.classList[1]+"> div.pre").classList.remove("visible");
+    document.querySelector("section."+close.classList[1]+"> div.nex").classList.remove("visible");
+    document.querySelector("section."+close.classList[1]+"> div.close").classList.remove("visible");
+  });
 });
-const open = document.querySelector("button.open")
-open.addEventListener("click", () =>{
-  document.querySelector("section.case > div.productScroll").classList.add("visible");
-  document.querySelector("div.pre").classList.add("visible");
-  document.querySelector("div.nex").classList.add("visible");
-  document.querySelector("div.close").classList.add("visible");
+const opens = document.querySelectorAll("a.open")
+opens.forEach(open => {
+  open.addEventListener("click", () =>{
+    document.querySelector("section."+open.classList[1]+"> div.productScroll").classList.add("visible");
+    document.querySelector("section."+open.classList[1]+"> div.pre").classList.add("visible");
+    document.querySelector("section."+open.classList[1]+"> div.nex").classList.add("visible");
+    document.querySelector("section."+open.classList[1]+"> div.close").classList.add("visible");
+    slider(open.classList[1]);
+
+  });
 });
+// startSlider();
 
 });
 

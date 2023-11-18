@@ -785,7 +785,7 @@ section.case
     background-color: #ffffff;
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 1em 0;
+    margin: 6em 0 0 0;
 }
 section.case > div:last-child
 {
@@ -805,6 +805,7 @@ section.case > div:last-child >h2
     color: goldenrod;
     font-size: 2.4em;
     padding: 0.8em;
+    top: -48px;
 }
 section.case > div:last-child >h2 >span
 {
@@ -824,6 +825,7 @@ section.case > div:last-child> div
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
+    flex-wrap: wrap;
 }
 section.case > div:last-child> div >div
 {
@@ -833,12 +835,77 @@ section.case > div:last-child> div >div
 }
 section.case > div:last-child> div>p
 {
-    text-align: center;
-    max-width: 50%;
+    text-align: left;
+    max-width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+section.case > div:last-child> div>img
+{
+    padding: 0.5em;
+    border: 1px solid #30135B;
+    border-radius: 3px;
+    margin: 0.5em;
+    transition: all .4s linear;
+}
+section.case > div:last-child> div>img:hover
+{
+    transform: scale(1.1);
+}
+section.case > div:last-child> div>div
+{
+    width: 5%;
+    margin: auto;
+}
+section.case > div:last-child> div>div a
+{
+    color: #30135B;
+    font-weight: 400;
+    margin: auto;
+    max-width: 3em;
+    cursor: pointer;
+    position: relative;
+    line-height: 45px;
+    text-transform: uppercase;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+section.case > div:last-child> div>div a:hover
+{
+    text-decoration: none;
+
+}
+section.case > div:last-child> div>div a
+{
+    font-weight: 100;
+}
+
+section.case > div:last-child> div>div a svg
+{
+    height: 45px;
+    width: 200px;
+    position: absolute;
+    left: -62px;
+
+}
+section.case > div:last-child> div>div a rect
+{
+    fill: none;
+    stroke: #30135B;
+    stroke-width: 2; 
+    stroke-dasharray: 422,0; 
+    transition: all .35s linear;
+}
+section.case > div:last-child> div>div a:hover rect
+{
+    stroke-width: 5;
+    stroke-dasharray: 203,284;
+    stroke-dashoffset: 244;
+}
+
 
 /* scrolling section of the product  */
 section.case > div.productScroll
