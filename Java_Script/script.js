@@ -92,6 +92,7 @@ $(document).ready(function()
 
   startSlide();
   
+// This function is used to toggle sliders on customize pc webpage 
 function slider(slide) 
 {
   const slides = document.querySelectorAll("section."+slide+">div.productScroll > div");

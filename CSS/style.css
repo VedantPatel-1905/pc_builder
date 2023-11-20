@@ -58,12 +58,7 @@ header.indexHeader > div:last-child > button
     border: none;
     background: none;
     position: relative;
-}
-header.indexHeader > div:first-child > button >img,
-header.indexHeader > div:last-child > button >img
-{
-    height: 40px;
-    width: auto;
+    cursor: pointer;
 }
 header.indexHeader > div:first-child > button > span,
 header.indexHeader > div:first-child > button > span::before,
@@ -103,7 +98,13 @@ header.indexHeader > div:first-child > button > span.navBtnCross::after
 {
     bottom: 48%;
     transform: rotate(-45deg);
-   
+    
+}
+header.indexHeader > div:last-child > button > i
+{
+    color: goldenrod;
+    font-size: 2.5em;
+    margin: 0 12px 0 0;
 }
 
 header.indexHeader > div:nth-child(2) >a 
@@ -658,30 +659,64 @@ section.prebuilt > div.productScroll >article >div:nth-child(5) >a:hover
 section.connection
 {
     display: flex;
+    box-sizing: border-box;
+    background-color: #30135B;
 }
 section.connection > div
 {
+    background-color: #e2e2f2;
     border: 1px solid #000000;
 }
-section.connection > div:last-child
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 45%;
-}
 
+section.connection > div:last-child,
 section.connection > div:first-child
 {
-    padding: 1em 3em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     width: 55%;
+    margin: 10px;
 }
-section.connection > div:first-child > div:nth-of-type(1)
+section.connection > div:first-child
+{
+    padding: 1em 3em;
+}
+section.connection > div:last-child
+{
+    width: 45%;
+    margin-left: 0px;
+    background-color: #30135B;
+}
+section.connection > div:last-child > div:nth-of-type(1)
+{
+    margin-bottom: 10px;
+}
+section.connection > div:last-child > div
+{
+    width: 100%;
+    background-color: #e2e2f2;
+    padding: 1em 3em;
+    box-sizing: border-box;
+}
+section.connection > div:first-child > h3
+{
+    font-weight: 900;
+    font-size: 2.5em;
+    margin: 0;
+}
+section.connection > div:first-child > span:first-of-type
+{
+    font-weight: 700;
+    font-size: 1.6em;
+}
+section.connection > div:first-child > span:first-of-type > span
+{
+    font-weight: 400;
+    font-size: .8em;
+}
+section.connection > div:first-child > div:nth-of-type(1),
+section.connection > div:last-child > div:first-child > div:nth-of-type(1)
 {
     height: 16em;
     width: 100%;
@@ -689,10 +724,47 @@ section.connection > div:first-child > div:nth-of-type(1)
     justify-content: center;
     align-items: center;
 }
-section.connection > div:first-child > div:nth-of-type(1) > img
+section.connection > div:first-child > div:nth-of-type(1)
+{
+    height: 21em;
+}
+section.connection > div:first-child > div:nth-of-type(1) > img,
+section.connection > div:last-child > div:first-child > div:nth-of-type(1) > img
 {
     height: 100%;
     width: auto;
+}
+section.connection > div:first-child > div:nth-of-type(2),
+section.connection > div:last-child > div:first-child > div:nth-of-type(2)
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 1em 0 0 0;
+}
+section.connection > div:first-child > div:nth-of-type(2) a,
+section.connection > div:last-child > div:first-child > div:nth-of-type(2) a
+{
+    background-color: #5828a2;
+    color: #f8f8f8;
+    padding: .6em 2em;
+    border-radius: 4px;
+}
+section.connection > div:last-child > div > h3
+{
+    font-size: 2.1em;
+    margin: 0;
+}
+section.connection > div:last-child > div > span:first-of-type
+{
+    font-weight: 700;
+    font-size: 1.6em;
+}
+section.connection > div:last-child > div > span:first-of-type > span
+{
+    font-weight: 400;
+    font-size: .8em;
 }
 
 /* css for customize pc webpage */
