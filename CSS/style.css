@@ -659,8 +659,9 @@ section.prebuilt > div.productScroll >article >div:nth-child(5) >a:hover
 section.connection
 {
     display: flex;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     background-color: #30135B;
+    width: 100%;
 }
 section.connection > div
 {
@@ -675,6 +676,7 @@ section.connection > div:first-child
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    box-sizing: border-box;
     width: 55%;
     margin: 10px;
 }
@@ -1827,7 +1829,31 @@ form.feedbackForm  button[type="submit"]:hover
     {
         display: none;
     }
-
+    /* css for home page */
+    section.connection
+    {
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+    section.connection > div:last-child,
+    section.connection > div:first-child
+    {
+        width: 97%;
+        margin: auto;
+    }
+    section.connection > div:last-child > div:nth-of-type(1) 
+    {
+        margin: 10px 0 10px 0;
+    }
+    section.connection > div:first-child > div:nth-of-type(2),
+    section.connection > div:last-child > div:first-child > div:nth-of-type(2)
+    {
+        justify-content: center;
+    }
+    section.productIntro > div >div >div> img
+    {
+        width: 27em;
+    }
     /* css for about section */
     section.aboutMasthead
     {
@@ -1869,6 +1895,24 @@ form.feedbackForm  button[type="submit"]:hover
 }
 @media only screen and (max-width: 850px)  
 {
+    /* css for home page */
+    section.productIntro > div >div >div> img 
+    {
+        width: 20em;
+    }
+    div.slider > div#masthead1 > div:nth-child(1),
+    div.slider > div#masthead3 > div:nth-child(1),
+    div.slider > div#masthead4 > div:nth-child(1) {
+        text-align: left;
+        padding: 7em 0 0 6rem;
+    }
+    div.slider > div#masthead2 > div:nth-child(2)
+    {
+        padding: 7em 0 0 2rem;
+    }
+    div.slider > div#masthead4 > div > h1 {
+        font-size: 2.3em;
+    }
     /* css for contact form */
     section.feedbackForm > div:first-child >div > div::before
     {
@@ -1885,6 +1929,23 @@ form.feedbackForm  button[type="submit"]:hover
 }
 @media only screen and (max-width:769px)  
 {
+    /* css for home page */
+    div.slider > div#masthead1,
+    div.slider > div#masthead3,
+    div.slider > div#masthead4 
+    {
+        flex-direction: column;
+    }
+    div.slider > div#masthead1 > div:nth-child(1),
+    div.slider > div#masthead3 > div:nth-child(1),
+    div.slider > div#masthead4 > div:nth-child(1) {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    div.slider > div#masthead2 
+    {
+        flex-direction: column-reverse;
+    }
     /* css for about section */
     section.aboutMasthead > div:last-child 
     {
@@ -1917,8 +1978,12 @@ form.feedbackForm  button[type="submit"]:hover
 }
 @media only screen and (max-width: 640px) 
 {
+    /* css for home page */
     section.aboutMasthead > div >h1 {
         font-size: 2.8em;
+    }
+    section.connection > div:first-child > div:nth-of-type(1) {
+        height: 16em;
     }
     /* css for pre built pc scroll */
     div.productPromo 

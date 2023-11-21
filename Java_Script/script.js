@@ -65,7 +65,7 @@ $(document).ready(function()
   // Left arrow click
   arrowLeft.addEventListener("click", function() 
   {
-    clearInterval(interval);
+    // clearInterval(interval);
     // i--;
     i = i<=0 ? 4 : i;
     slideLeft();
@@ -74,7 +74,7 @@ $(document).ready(function()
   // Right arrow click
   arrowRight.addEventListener("click", function() 
   {
-    clearInterval(interval);
+    // clearInterval(interval);
     // i++;
     i = i>=5 ? 1 : i;
     slideRight();
@@ -86,9 +86,9 @@ $(document).ready(function()
   });
 
   //function to start slider on mouseout
-  $('.slider').on('mouseleave',function() {
-    startSlider()
-  });
+  // $('.slider').on('mouseleave',function() {
+  //   startSlider()
+  // });
 
   startSlide();
   
