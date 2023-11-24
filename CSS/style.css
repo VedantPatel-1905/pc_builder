@@ -1954,6 +1954,32 @@ form.feedbackForm  button[type="submit"]:hover
         box-sizing: border-box;
         flex-direction: column-reverse;
     }
+    
+    div.slider > div#masthead1, 
+    div.slider > div#masthead3 
+    {
+        background-image: none;
+        height: auto;
+    }
+    div.slider > div#masthead3 div:first-child
+    {
+        background-color: #010101;
+        background: linear-gradient(180deg,#010101 ,#01131d );
+    }
+    div.slider > div#masthead1 > div:nth-child(2),
+    div.slider > div#masthead3 > div:nth-child(2)
+    {
+        background-image: url('../img/masthead4_1280.jpg');
+        background-size: cover;
+        background-position: right;
+        height: 18em;
+        width: 100%;
+    }
+    div.slider > div#masthead3 > div:nth-child(2)
+    {
+        background-image: url('../img/masthead5_1280.jpg');
+
+    }
     div.slider > div#masthead2 > div,
     section.productIntro > div >div>div img
     {
@@ -2041,6 +2067,14 @@ form.feedbackForm  button[type="submit"]:hover
 }
 @media only screen and (max-width: 426px) 
 {
+    div.slider > div#masthead1 > div:nth-child(2)
+    {
+        background-image: url('../img/masthead4_426px.jpg');
+    }
+    div.slider > div#masthead3 > div:nth-child(2)
+    {
+        background-image: url('../img/masthead5_426.jpg');
+    }
     /* css for contact form */
     section.feedbackForm > div:first-child >div > div::before
     {
