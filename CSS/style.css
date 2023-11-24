@@ -507,11 +507,11 @@ div.carouselBtn:focus
     outline: 1px solid black;
 }
 
-div.carouselBtn#prev
+div.carouselBtn.prev
 {
     left: .3rem;
 }
-div.carouselBtn#next
+div.carouselBtn.next
 {
     right: .3rem;
 }
@@ -771,6 +771,7 @@ section.connection > div:last-child > div > span:first-of-type > span
 section.customizeMasthead
 {
     display: flex;
+    background-color: #e8e8f5;
 }
 section.customizeMasthead 
 {
@@ -1430,11 +1431,13 @@ section.about
     align-items: center;
     justify-content: center;
     background-color: #e0e0e0;
+    overflow: hidden;
 }
 section.about > div:first-child
 {
     width: 40%;
     margin: 0 0 0 7em;
+    transform: translateX(-100%);
 }
 section.about > div:last-child
 {
@@ -1442,18 +1445,27 @@ section.about > div:last-child
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    transform: translateX(100%);
 }
 section.aboutLeft
 {
     flex-direction: row-reverse;
+    
 }
 section.aboutLeft > div:last-child
 {
     justify-content: flex-start;
+    transform: translateX(-100%);
 }
 section.aboutLeft > div:first-child
 {
-    margin: 0px;
+transform: translateX(100%);
+margin: 0px;
+}
+section.about > div.scroll-right
+{
+    transform: translateX(0);   
+    transition: all .6s linear; 
 }
 section.about > div > img
 {
@@ -1948,6 +1960,8 @@ form.feedbackForm  button[type="submit"]:hover
 }
 @media only screen and (max-width:769px)  
 {
+    section.case > div.productScroll >div
+    
     /* css for home page */
     div.slider > div#masthead1,
     div.slider > div#masthead3,
@@ -2091,6 +2105,21 @@ form.feedbackForm  button[type="submit"]:hover
 }
 @media only screen and (max-width: 640px) 
 {
+    section.case > div:last-child> div>div:first-child 
+    {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px;
+        box-sizing: border-box;
+    }
+    .menuContainer > div > nav > menu > li > a 
+    {
+        font-size: 1.1em;
+    }
+    .menuContainer > div > nav > menu > li.boldMenu > a 
+    {
+        font-size: 1.6em;
+    }
     /* css for home page */
     section.aboutMasthead > div >h1 {
         font-size: 2.8em;
@@ -2126,6 +2155,14 @@ form.feedbackForm  button[type="submit"]:hover
 }
 @media only screen and (max-width: 426px) 
 {
+    .menuContainer > div > nav > menu > li > a 
+    {
+        font-size: 1em;
+    }
+    .menuContainer > div > nav > menu > li.boldMenu > a 
+    {
+        font-size: 1.3em;
+    }
     div.slider > div#masthead1 > div:nth-child(2)
     {
         background-image: url('../img/masthead4_426px.jpg');

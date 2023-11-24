@@ -24,8 +24,8 @@ $(document).ready(function()
   });
 
   // jquery  for masthead carousel
-  arrowLeft = document.querySelector("#prev"),
-  arrowRight = document.querySelector("#next"),
+  arrowLeft = document.querySelector(".prev");
+  arrowRight = document.querySelector(".next");
   i = 2;
 
 
@@ -61,24 +61,28 @@ $(document).ready(function()
     $('.slider > div#masthead' + i).css('display', 'flex');
     i++;
   }
+  if(document.body.classList.contains('indexBody')) {
+
+    // add event listeners
   
-  // Left arrow click
-  arrowLeft.addEventListener("click", function() 
-  {
-    // clearInterval(interval);
-    // i--;
-    i = i<=0 ? 4 : i;
-    slideLeft();
-  });
-  
-  // Right arrow click
-  arrowRight.addEventListener("click", function() 
+    // Left arrow click
+    arrowLeft.addEventListener("click", function() 
+    {
+      // clearInterval(interval);
+      // i--;
+      i = i<=0 ? 4 : i;
+      slideLeft();
+    });
+    
+    // Right arrow click
+    arrowRight.addEventListener("click", function() 
   {
     // clearInterval(interval);
     // i++;
     i = i>=5 ? 1 : i;
     slideRight();
   });
+}
 
   //function to stop slider on mouseover
   $('.slider').on('mouseover',function() {
@@ -98,10 +102,12 @@ function slider(slide)
   const slides = document.querySelectorAll("section."+slide+">div.productScroll > div");
   let currentSlide = 0; 
   
-  const nextBtn = document.querySelectorAll("#next");
-  const prevBtn = document.querySelectorAll("#prev");
+  const nextBtn = document.querySelectorAll(".next");
+  const prevBtn = document.querySelectorAll(".prev");
 
+  // This loop selects all the instance the buttons next buttons from the html
   nextBtn.forEach(next => {
+    // This event listener applies the function on the button which is clicked
     next.addEventListener("click", () => {
       currentSlide++;
       if(currentSlide > slides.length - 1) {
@@ -111,7 +117,9 @@ function slider(slide)
     });
   });
   
+  // This loop selects all the instance the buttons previous buttons from the html
   prevBtn.forEach(previous => {
+    // This event listener applies the function on the button which is clicked
     previous.addEventListener("click", () => {
       currentSlide--;
       if(currentSlide < 0) {
@@ -121,17 +129,21 @@ function slider(slide)
     });
   });
   
+  // This function removes the visible class from all the slides
   function setActiveSlide() {
     slides.forEach(slide => {
       slide.classList.remove("visible");  
     });
     
+    // This function adds the visible class to the active slides
     slides[currentSlide].classList.add("visible");
   }
 }
 
 const closes = document.querySelectorAll("div.close")
+// This loop selects the instance of all the close button in html file
 closes.forEach(close => {
+  // This event listener will make the customization box invisible when clicked
   close.addEventListener("click", () =>{
     document.querySelector("section."+close.classList[1]+"> div.productScroll").classList.remove("visible");
     document.querySelector("section."+close.classList[1]+"> div.pre").classList.remove("visible");
@@ -139,8 +151,10 @@ closes.forEach(close => {
     document.querySelector("section."+close.classList[1]+"> div.close").classList.remove("visible");
   });
 });
+// This loop selects the instance of all the open button in html file
 const opens = document.querySelectorAll("a.open")
 opens.forEach(open => {
+  // This event listener will make the customization box visible when clicked
   open.addEventListener("click", () =>{
     document.querySelector("section."+open.classList[1]+"> div.productScroll").classList.add("visible");
     document.querySelector("section."+open.classList[1]+"> div.pre").classList.add("visible");
@@ -148,6 +162,32 @@ opens.forEach(open => {
     document.querySelector("section."+open.classList[1]+"> div.close").classList.add("visible");
     slider(open.classList[1]);
 
+  });
+});
+
+
+// This function will map active content and heaing on aside
+$(window).scroll(function() 
+{
+
+  // scrollTop gets current scrol position of the screen in px
+  var scrollPos = $(window).scrollTop();
+  $('section').each(function() 
+  {
+    // following two lines will calculate the height of the active section 
+    var sectionTop = $(this).offset().top - 500; 
+    var sectionBottom = sectionTop + $(this).outerHeight();
+
+    var sectionId = $(this).attr('id');
+    if (scrollPos >= sectionTop && scrollPos < sectionBottom) 
+    {
+      // Here we get the id of current section and apply css to corresponding heading in aside
+      $('section#'+sectionId +' div').addClass('scroll-right');
+    }
+    else
+    {
+      $('section#'+sectionId +' div').remove('scroll-right');
+    }
   });
 });
 // startSlider();
