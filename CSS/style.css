@@ -829,7 +829,7 @@ section.customizeIntro
 {
     display: flex;
     flex-direction: column;
-    
+    width: 100%;
 }
 section.customizeIntro > div:first-child 
 {
@@ -852,6 +852,7 @@ div.customizeIntro
     display: grid;
     grid-template-columns: repeat(4,25%);
     justify-content: center;
+    grid-auto-flow: row;
     align-items: center;
     text-align: center;
     background-color: #ffffff;
@@ -912,7 +913,7 @@ section.case > div:last-child >h2
     font-weight: 700;
     padding: 1em 0 0 0;
     box-sizing: border-box;
-    width: 40%;
+    width: 16em;
     margin: 0 0 1em 0;
     background-color: #30135B;
     color: goldenrod;
@@ -945,6 +946,7 @@ section.case > div:last-child> div >div
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 40%;
 }
 section.case > div:last-child> div>p
 {
@@ -966,10 +968,9 @@ section.case > div:last-child> div>img:hover
 {
     transform: scale(1.1);
 }
-section.case > div:last-child> div>div
+section.case > div:last-child> div>div:first-child
 {
-    width: 5%;
-    margin: auto;
+    width: 60%;
 }
 section.case > div:last-child> div>div a
 {
@@ -1888,6 +1889,12 @@ form.feedbackForm  button[type="submit"]:hover
         width: 100%;
     }
 
+    /* css  for customize pc */
+    section.customizeMasthead > div:nth-child(1) 
+    {
+        padding: 72px 0 0 2rem;
+        width: 50%;
+    }
     /* css for pre built pc scroll */
     section.masthead 
     {
@@ -1898,7 +1905,12 @@ form.feedbackForm  button[type="submit"]:hover
     {
         width: 0px;
     }
-    
+    div.customizeIntro
+    {   
+       grid-template-columns: repeat(1,50%);
+       
+
+    }   
 }
 @media only screen and (max-width: 850px)  
 {
@@ -2033,6 +2045,49 @@ form.feedbackForm  button[type="submit"]:hover
     {
         flex-direction: column;
     }
+
+    /* css for customization page */
+    section.customizeMasthead
+    {
+        flex-direction: column;
+        background-image: none;
+        height: auto;
+    }
+    section.customizeMasthead > div:first-child
+    {
+        box-sizing: border-box;
+        width: 100%;
+    }
+    section.customizeMasthead > div:last-child
+    {
+        background-image: url('../img/customizeMasthead.png');
+        background-size: cover;
+        background-position: right;
+        height: 19em;
+
+    }
+    section.customizeIntro > div:first-child > h2
+    {
+        width: 85%;
+        font-size: 2em;
+    }
+    section.case > div:last-child >h2
+    {
+        width: 90%;
+    }
+    
+    section.case > div:last-child> div
+    {
+        flex-direction: column;
+    }
+    section.case > div:last-child> div>div:first-child {
+        width: 100%;
+    }
+    section.case > div:last-child> div >div 
+    {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
 }
 @media only screen and (max-width: 640px) 
 {
@@ -2063,6 +2118,10 @@ form.feedbackForm  button[type="submit"]:hover
     section.feedbackForm > div:first-child >div > div:nth-child(2) >p
     {
         width: 100%;
+    }
+    section.customizeMasthead > div > a> span 
+    {
+        padding: 10px 1.7em;
     }
 }
 @media only screen and (max-width: 426px) 
@@ -2101,6 +2160,15 @@ form.feedbackForm  button[type="submit"]:hover
     }
     div.slider > div#masthead1 > div:nth-child(1), div.slider > div#masthead3 > div:nth-child(1), div.slider > div#masthead4 > div:nth-child(1) {
         padding: 7em 0 0 2rem;
+    }
+    /* css for customize section */
+    section.customizeMasthead > div:last-child
+    {
+        background-image: url('../img/customizeMasthead_426.png');
+        background-size: cover;
+        background-position: right;
+        height: 19em;
+
     }
     
 }
