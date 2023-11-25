@@ -1081,7 +1081,8 @@ div.close
     height: 1.5em;
     width: 1.5em;
     top: 6rem;
-    right: 28%;    
+    right: 21%;    
+    background-color: transparent;
 }
 div.sliderBtn:focus,
 div.sliderBtn:hover
@@ -1095,11 +1096,11 @@ div.sliderBtn:focus
 
 div.sliderBtn.pre
 {
-    left: 30%;
+    left: 24%;
 }
 div.sliderBtn.nex
 {
-    left: 68%;
+    right: 24%;
 }
 section.case > div.productScroll >div p
 {
@@ -1108,8 +1109,8 @@ section.case > div.productScroll >div p
 section.case > div.productScroll >div
 {
     display: none;
-    width: 30%;
-    padding: 1em 7em;
+    width: 40%;
+    padding: 1em 5em;
     border-radius: 5px;
     flex-direction: column;
     margin: 1em 3em;
@@ -1928,8 +1929,25 @@ footer > div:last-child > p
 
 /* ------- css for responsive layout of website------- */
 
+@media only screen and (max-width:1600px) 
+{
+
+}
 @media only screen and (max-width:1440px) 
 {
+    div.close
+    {
+        right: 25%;    
+    }
+    div.sliderBtn.pre
+    {
+        left: 26%;
+    }
+    div.sliderBtn.nex
+    {
+        right: 26%;
+    }
+
 }
 @media only screen and (max-width: 1280px)  
 {   
@@ -2057,9 +2075,19 @@ footer > div:last-child > p
     div.customizeIntro
     {   
        grid-template-columns: repeat(1,50%);
-       
-
-    }   
+    } 
+    div.close
+    {
+        right: 22%;    
+    }
+    div.sliderBtn.pre
+    {
+        left: 23%;
+    }
+    div.sliderBtn.nex
+    {
+        right: 23%;
+    }  
 }
 @media only screen and (max-width: 850px)  
 {
@@ -2289,6 +2317,22 @@ footer > div:last-child > p
     {
         padding: 10px 1.7em;
     }
+    section.case > div.productScroll >div {
+        width: 60%;
+    }
+
+    div.close
+    {
+        right: 9%;    
+    }
+    div.sliderBtn.pre
+    {
+        left: 12%;
+    }
+    div.sliderBtn.nex
+    {
+        right: 12%;
+    }  
 }
 @media only screen and (max-width: 426px) 
 {
@@ -2344,7 +2388,27 @@ footer > div:last-child > p
         height: 19em;
 
     }
-    
+    section.case > div.productScroll >div
+    {
+        width: 50%;
+    }
+    section.case > div.productScroll >div {
+        width: 80%;
+        padding: 1em 3em;
+    }
+
+    div.close
+    {
+        right: 9%;    
+    }
+    div.sliderBtn.pre
+    {
+        left: 12%;
+    }
+    div.sliderBtn.nex
+    {
+        right: 12%;
+    }  
 }
 
 @media only screen and (max-width: 320px) 
