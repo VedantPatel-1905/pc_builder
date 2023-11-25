@@ -1080,8 +1080,8 @@ div.close
 {
     height: 1.5em;
     width: 1.5em;
-    top: 6rem;
-    right: 21%;    
+    top: 19%;
+    right: 26%;    
     background-color: transparent;
 }
 div.sliderBtn:focus,
@@ -1096,11 +1096,11 @@ div.sliderBtn:focus
 
 div.sliderBtn.pre
 {
-    left: 24%;
+    left: 26%;
 }
 div.sliderBtn.nex
 {
-    right: 24%;
+    right: 26%;
 }
 section.case > div.productScroll >div p
 {
@@ -2087,7 +2087,25 @@ footer > div:last-child > p
     div.sliderBtn.nex
     {
         right: 23%;
-    }  
+    } 
+    
+    /* css for service page */
+    section.support > div,
+    section.Header > div 
+    {
+        flex-direction: column;
+        width: 90%;
+    }
+    section.support > div p
+    {
+        font-size: 1em;
+    }
+    section.support > div >div:first-child, 
+    section.support > div >div:last-child 
+    {
+        width: 100%;
+        margin: auto;
+    }
 }
 @media only screen and (max-width: 850px)  
 {
@@ -2332,7 +2350,15 @@ footer > div:last-child > p
     div.sliderBtn.nex
     {
         right: 12%;
-    }  
+    } 
+    section.chooseMasthead > div > h1 
+    {
+        font-size: 3em;
+    } 
+    section.Header > div h2, section.support > div h2 
+    {
+        font-size: 2.2em;
+    }
 }
 @media only screen and (max-width: 426px) 
 {
@@ -2360,6 +2386,7 @@ footer > div:last-child > p
     section.chooseMasthead > div > h1 
     {
         font-size: 3em;
+        text-align: center;
     }
     section.connection > div:first-child > div:nth-of-type(1),
     section.connection > div:last-child > div:first-child > div:nth-of-type(1) {
@@ -2409,6 +2436,10 @@ footer > div:last-child > p
     {
         right: 12%;
     }  
+    section.support > div h2::before
+    {
+        width: 4em;
+    }
 }
 
 @media only screen and (max-width: 320px) 
