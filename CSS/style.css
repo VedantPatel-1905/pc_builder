@@ -559,7 +559,7 @@ section.prebuilt > div.productScroll
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     scroll-snap-align: start;
-    background-color: #ffffff;
+    background-color: #30135B;
 }
 section.prebuilt > div.productScroll::-webkit-scrollbar
 {
@@ -574,8 +574,9 @@ section.prebuilt > div.productScroll >article
 {
     display: flex;
     flex-direction: column;
-    margin: 1em 3em;
-    
+    margin: 1em 2em;
+    padding: 0 2em;
+    background-color: #e2e2f2;
 }
 section.prebuilt > div.productScroll >article >div:first-child
 {
@@ -642,6 +643,7 @@ section.prebuilt > div.productScroll >article >div:nth-child(5) >a
 {
     display: block;
     padding: 10px 0;
+    margin: 0 0 19px 0;
     width: 100%;
     border-radius: 5px;
     background-color: #5828a2;
@@ -1078,7 +1080,7 @@ div.close
 {
     height: 1.5em;
     width: 1.5em;
-    top: 20%;
+    top: 6rem;
     right: 28%;    
 }
 div.sliderBtn:focus,
@@ -1788,6 +1790,141 @@ form.feedbackForm  button[type="submit"]:hover
 }
 
 /* css for help and support section */
+/* ------- css for footer of website------- */
+
+footer 
+{
+    background-color: #5828a2;
+    padding: 15px 0 0 0;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 20px 0px, rgba(0, 0, 0, 0.69) 0px 5px 20px 0px;
+    z-index: 10;
+}
+
+footer > div 
+{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+footer > div > div 
+{
+    max-width: 300px;
+}
+
+footer h3 
+{
+    color: #efefef;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer p 
+{
+    color: #d1e4f0;
+}
+
+footer  > div 
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer  > div > div 
+{
+    flex-basis: 20%;
+}
+
+footer  > div > div h3 
+{
+    font-size: 18px;
+    margin:0 0 10px 0;
+}
+
+footer  > div > div:first-child > p 
+{
+    line-height: 28.1px;
+}
+
+footer  > div > div > ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}   
+
+footer  > div > div ul li
+{
+    margin: 0 0 5px 0;
+}
+
+footer  > div > div ul li a
+{
+    color: #efefef;
+}
+
+footer >div > div > ul > li > a:hover 
+{
+    color: #0b8baf;
+}
+
+footer  > div > div > form 
+{
+    position: relative;
+}
+
+footer  > div > div > form> input
+{
+    height: 30px;
+    border: none;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+footer  > div > div > form> input:focus,
+footer  > div > div > form> input:nth-child(2):focus {
+    outline: none;
+    background-color: #d4d4d4;
+}
+
+footer  > div > div > form input:nth-child(2) 
+{
+    margin-top: 10px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #0b8baf;
+    transition: background-color 0.3s;
+}
+
+footer  > div > div > form input:nth-child(2):hover 
+{
+    background-color: #1289aa;
+}
+
+footer >div > div > ul > li > a 
+{
+    transition: color 0.3s;
+}
+  
+/* ------- css for bottom section of footer------- */
+footer > div:last-child 
+{
+    color: #efefef;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+footer > div:last-child > p 
+{
+  font-size: 12px;
+}
+
 
 /* ------- css for responsive layout of website------- */
 
