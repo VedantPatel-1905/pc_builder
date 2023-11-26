@@ -17,7 +17,7 @@ $(document).ready(function()
   // This function will load global footer and header
   $(function()
   {
-    $('#footer').load('footer.html');
+    $('footer').load('footer.html');
     $('#head').load('head.html');
     $('header.indexHeader').load('header.html');
     $('div.backgroundBlur').load('hiddenMenu.html');
@@ -181,12 +181,13 @@ $(window).scroll(function()
     var sectionId = $(this).attr('id');
     if (scrollPos >= sectionTop && scrollPos < sectionBottom) 
     {
+      console.log(sectionId)
       // Here we get the id of current section and apply css to corresponding heading in aside
-      $('section#'+sectionId +' div').addClass('scroll-right');
+      $('section#'+sectionId +'> div').addClass('scroll-right');
     }
     else
     {
-      $('section#'+sectionId +' div').remove('scroll-right');
+      $('section#'+sectionId +' >div').remove('scroll-right');
     }
   });
 });
