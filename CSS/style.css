@@ -31,7 +31,7 @@ header.indexHeader
     align-items: center;
     justify-content: space-between;
     height: 80px;
-    background-color: #101010;
+    background-color: #f8f8f8;    
     width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -66,9 +66,9 @@ header.indexHeader > div:first-child > button > span::after
 {
     display: flex;
     height: 3px;
-    width: 42px;
+    width: 35px;
     border-radius: 3px;
-    background-color: goldenrod;
+    background-color: #7e22ce;
     transition: all .2s ease-in-out;
 }
 header.indexHeader > div:first-child > button > span::before
@@ -76,14 +76,14 @@ header.indexHeader > div:first-child > button > span::before
     transition: all .3s ease-in-out;
     content: '';
     position: absolute;
-    top: 35px;
+    top: 37px;
 }
 header.indexHeader > div:first-child > button > span::after
 {
     transition: all .3s ease-in-out;
     content: '';
     position: absolute;
-    bottom: 35px;
+    bottom: 37px;
 }
 header.indexHeader > div:first-child > button > span.navBtnCross
 {
@@ -102,7 +102,7 @@ header.indexHeader > div:first-child > button > span.navBtnCross::after
 }
 header.indexHeader > div:last-child > button > i
 {
-    color: goldenrod;
+    color: #7e22ce;
     font-size: 2.5em;
     margin: 0 12px 0 0;
 }
@@ -115,7 +115,8 @@ header.indexHeader > div:nth-child(2) >a
     display: flex;
     justify-content: center;
     align-items: center;
-    text-shadow: 1px 1px 1px #f8f8f8;
+    color: #7e22ce;
+    /* text-shadow: 1px 1px 1px #f8f8f8; */
 }
 
 
@@ -130,7 +131,7 @@ div.subHeader > nav
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #1c1c1c;
+    background-color: #ffffff;
 }
 div.subHeader > nav > menu
 {
@@ -146,7 +147,7 @@ div.subHeader > nav > menu > li
 }
 div.subHeader > nav > menu > li > a
 {
-    color: #c19b51;
+    color: #7e22ce;
     /* color: #802bb1; */
     font-size: 1em;
     transition: all .5 ease-in;
@@ -157,7 +158,7 @@ div.subHeader > nav > menu > li > a:nth-child(2):hover,
 div.subHeader > nav > menu > li > a:nth-child(3):hover,
 div.subHeader > nav > menu > li > a:nth-child(4):hover
 {
-    border-top: 2px solid #c19b51;
+    border-top: 2px solid #7e22ce;
 }
 
 /* css for hidden menu of website */
