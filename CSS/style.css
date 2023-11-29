@@ -528,6 +528,7 @@ section.prebuilt > div:first-child >h2
     font-weight: 700;
     margin: 0px;
     padding: 1em 0 0 0;
+    text-align: center;
     color: #10091d;
 }
 section.prebuilt > div:first-child >p
@@ -693,6 +694,16 @@ section.connection > div:last-child > div
     background-color: #e2e2f2;
     padding: 1em 3em;
     box-sizing: border-box;
+}
+section.connection > div:last-child > div > div
+{
+    display: flex;
+    align-items: center;
+}
+section.connection > div:last-child > div > div > div:first-child
+{
+    font-size: 3em;
+    padding: 20px;
 }
 section.connection > div:first-child > h3
 {
@@ -2109,7 +2120,12 @@ footer > div:last-child > p
     div.customizeIntro
     {   
        grid-template-columns: repeat(1,50%);
+       margin: 5em 0 0 0;
     } 
+    div.customizeIntro > div 
+    {
+        margin: 3em 0 0 0;
+    }
     div.close
     {
         right: 22%;    
@@ -2437,6 +2453,11 @@ footer > div:last-child > p
 }
 @media only screen and (max-width: 426px) 
 {
+    section.connection > div:last-child > div > div > div:first-child
+    {
+        display: none;
+    }
+
     .menuContainer > div > nav > menu > li > a 
     {
         font-size: 1em;
