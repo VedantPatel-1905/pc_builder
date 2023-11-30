@@ -1456,7 +1456,7 @@ section.about > div:first-child
 {
     width: 40%;
     margin: 0 0 0 7em;
-    transform: translateX(-100%);
+    transform: translateX(-118%);
 }
 section.about > div:last-child
 {
@@ -1478,7 +1478,7 @@ section.aboutLeft > div:last-child
 }
 section.aboutLeft > div:first-child
 {
-transform: translateX(100%);
+transform: translateX(151%);
 margin: 0px;
 }
 section.about > div.scroll-right
