@@ -1839,13 +1839,6 @@ footer > div > div
     max-width: 300px;
 }
 
-footer h3 
-{
-    color: #0e0e0e;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
 footer p 
 {
     color: #0e0e0e;
@@ -1866,7 +1859,7 @@ footer  > div > div
 
 footer  > div > div h3 
 {
-    font-size: 18px;
+    font-size: 21px;
     margin:0 0 10px 0;
 }
 footer  > div > div >div
@@ -1908,7 +1901,7 @@ footer  > div > div ul li a
 
 footer >div > div > ul > li > a:hover 
 {
-    color: goldenrod;
+    color: #900bd3;
 }
 
 footer  > div > div > form 
