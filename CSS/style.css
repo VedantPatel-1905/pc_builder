@@ -573,6 +573,13 @@ section.prebuilt > div.productScroll >article
     margin: 1em 2em;
     padding: 0 2em;
     background-color: #e2e2f2;
+    box-shadow: 0px 0px 11px #30135b;
+    transition: all .2s linear;
+}
+section.prebuilt > div.productScroll >article:hover
+{
+    box-shadow: 0px 0px 16px #260f48;
+
 }
 section.prebuilt > div.productScroll >article >div:first-child
 {
@@ -583,15 +590,9 @@ section.prebuilt > div.productScroll >article >div:first-child
     justify-content: center;  
     align-content: center;
 }
-section.prebuilt > div.productScroll >article >div:first-child:hover >img
-{
-    max-width: 270px;
-    max-height: 275px;
-    
-}
+
 section.prebuilt > div.productScroll >article >div:first-child >img
 {
-    transition: all .3s ease-in-out;
     margin: auto;
     max-width: 250px;
 }
@@ -646,9 +647,11 @@ section.prebuilt > div.productScroll >article >div:nth-child(5) >a
     transition: all .2s ease-in-out;
     color: #f2f2f2;
 }
-section.prebuilt > div.productScroll >article >div:nth-child(5) >a:hover
+section.prebuilt > div.productScroll >article >div:nth-child(5) >a:hover 
 {
-    transform: scale(1.1);
+    /* box-shadow: 0px 0px 11px #30135b; */
+    transform: scale(1.05);
+    
 }
 
 /* css for homepage links to other pages */
@@ -757,8 +760,10 @@ section.connection > div:last-child > div:first-child > div:nth-of-type(2) a
 {
     background-color: #5828a2;
     color: #f8f8f8;
-    padding: .6em 2em;
+    padding: 0.6em 1.5em;
     border-radius: 4px;
+    font-size: 1.3em;
+    font-family: monospace, sans-serif;
 }
 section.connection > div:last-child > div > h3
 {
@@ -898,6 +903,7 @@ div.customizeIntro > div > p
 {
     font-size: 1em;
     padding: 10px 0 0 0;
+    min-height: 40px;
 }
 
 /* css for customize model case */
@@ -1749,13 +1755,14 @@ section.feedbackForm > div:first-child >div.feedbackHeading::before
 
 form.feedbackForm 
 {
+    border: 1px solid rgb(14, 3, 16);
     max-width: 475px;
     height: 94%;
     box-sizing: border-box;
     margin: 1em auto;
     padding: 20px;
-    background-color: #673AB7;
-    border-radius: 5px;
+    background-color: #e2e2f2;
+    /* border-radius: 5px; */
 }
   
 form.feedbackForm > h3 
@@ -1779,10 +1786,10 @@ form.feedbackForm  input[type="text"],
 form.feedbackForm  input[type="email"],
 form.feedbackForm  textarea 
 {
-    background-color: #D1C4E9;
+    /* background-color: #D1C4E9; */
     width: 95.2%;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 3px;
 }
 
@@ -1918,7 +1925,10 @@ footer  > div > div > form> input
     border-radius: 5px;
     transition: background-color 0.3s;
 }
-
+footer > div > div > form> input:last-child
+{
+    width: 26%;
+}
 footer  > div > div > form> input:focus,
 footer  > div > div > form> input:nth-child(2):focus {
     outline: none;
