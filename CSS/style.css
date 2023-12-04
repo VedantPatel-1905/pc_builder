@@ -494,7 +494,7 @@ div.subHeader > nav > menu > li > a
     color: #7e22ce;
     /* color: #802bb1; */
     font-size: 1em;
-    transition: all .4 ease-in;
+    transition: all .4s ease-in;
     padding: 6px 0 0 0;
 }
 div.subHeader > nav > menu > li > a:nth-child(1):hover,
@@ -620,7 +620,7 @@ section.productIntro > div >div
     display: flex;
     align-items: center;
     width: 100%;
-    transition: all .3 linear;
+    transition: all .3s linear;
 
 }
 section.productIntro > div >div>div
